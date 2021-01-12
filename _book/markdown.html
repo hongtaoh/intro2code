@@ -156,7 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.6</b> 链接</a></li>
 <li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#插入图片"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
 <li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.8</b> 代码</a></li>
-<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.9</b> HTML</a></li>
+<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.9</b> 注释</a></li>
+<li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.10</b> HTML</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="markdown.html"><a href="markdown.html#自己试一下"><i class="fa fa-check"></i><b>2.3</b> 自己试一下</a></li>
 </ul></li>
@@ -357,75 +358,82 @@ for (let i = 0; i < 5; i++){
 </script>
 <p>我在这里没法展示源代码，只能像上面一样展示结果。源代码可以参考 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting">这里</a>。</p>
 </div>
-<div id="html" class="section level3" number="2.2.9">
-<h3><span class="header-section-number">2.2.9</span> HTML</h3>
+<div id="注释" class="section level3" number="2.2.9">
+<h3><span class="header-section-number">2.2.9</span> 注释</h3>
+<p>注释只需要在需要注释文字的后面加 <code>^[这里输入注释文字]</code>。这个上面其实已经有例了。不过我再举一个：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="markdown.html#cb11-1" aria-hidden="true" tabindex="-1"></a>你好吗^<span class="co">[</span><span class="ot">在中国常用的问候语</span><span class="co">]</span>？</span></code></pre></div>
+<p>你好吗<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>？</p>
+</div>
+<div id="html" class="section level3" number="2.2.10">
+<h3><span class="header-section-number">2.2.10</span> HTML</h3>
 <p>最重要的一点，Markdown 可以识别 <code>HTML</code> 代码。也就是说，你把 Markdown 当成 <code>HTML</code> 来写也可以。</p>
-<p>比如，插入图片时，Markdown 本身的 <code>![]()</code> 是不支持你加入图片说明文字的<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>。这时候你就可以直接用原生的 <code>HTML</code> 代码：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="markdown.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure&gt;</span></span>
-<span id="cb11-2"><a href="markdown.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;GitHub&quot;</span><span class="kw">/&gt;</span></span>
-<span id="cb11-3"><a href="markdown.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;figcaption&gt;</span>这里添加图片说明文字<span class="kw">&lt;/figcaption&gt;</span></span>
-<span id="cb11-4"><a href="markdown.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
-<p>以上代码来自 <code>https://stackoverflow.com/a/19360305</code>。</p>
+<p>比如，插入图片时，Markdown 本身的 <code>![]()</code> 是不支持你加入图片说明文字的<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>。这时候你就可以直接用原生的 <code>HTML</code> 代码：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="markdown.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure&gt;</span></span>
+<span id="cb12-2"><a href="markdown.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;GitHub&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb12-3"><a href="markdown.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;figcaption&gt;</span>这里添加图片说明文字<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb12-4"><a href="markdown.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<p>以上代码来自 <a href="https://stackoverflow.com/a/19360305" class="uri">https://stackoverflow.com/a/19360305</a>。</p>
 </div>
 </div>
 <div id="自己试一下" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> 自己试一下</h2>
 <p>你自己把下面的内容复制粘贴到 <code>https://stackedit.io/app#</code>，看看右边出来的结果就大体了解了。</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="markdown.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 第一级标题</span></span>
-<span id="cb12-2"><a href="markdown.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## 第二级标题</span></span>
-<span id="cb12-3"><a href="markdown.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 第三级标题</span></span>
-<span id="cb12-4"><a href="markdown.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 第四级标题</span></span>
-<span id="cb12-5"><a href="markdown.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 第五级标题</span></span>
-<span id="cb12-6"><a href="markdown.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">###### 第六级标题</span></span>
-<span id="cb12-7"><a href="markdown.html#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="markdown.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 粗体、斜体</span></span>
-<span id="cb12-9"><a href="markdown.html#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**粗体**</span>
-<span id="cb12-10"><a href="markdown.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*斜体*</span>
-<span id="cb12-11"><a href="markdown.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>***粗斜体***</span>
-<span id="cb12-12"><a href="markdown.html#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>~~删除~~</span>
-<span id="cb12-13"><a href="markdown.html#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="markdown.html#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 列表</span></span>
-<span id="cb12-15"><a href="markdown.html#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-16"><a href="markdown.html#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
-<span id="cb12-17"><a href="markdown.html#cb12-17" aria-hidden="true" tabindex="-1"></a>   列表内想有缩进内容，但是不想让内容前有列表标记的话，只需要在这一行空三格。</span>
-<span id="cb12-18"><a href="markdown.html#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-19"><a href="markdown.html#cb12-19" aria-hidden="true" tabindex="-1"></a>   缩进内容想要有间隔的话，两段内要有一个空行。</span>
-<span id="cb12-20"><a href="markdown.html#cb12-20" aria-hidden="true" tabindex="-1"></a>   这一行没有空行，所以就没有间隔。</span>
-<span id="cb12-21"><a href="markdown.html#cb12-21" aria-hidden="true" tabindex="-1"></a>   看到了吧？</span>
-<span id="cb12-22"><a href="markdown.html#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
-<span id="cb12-23"><a href="markdown.html#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
-<span id="cb12-24"><a href="markdown.html#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Water</span>
-<span id="cb12-25"><a href="markdown.html#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Water</span>
-<span id="cb12-26"><a href="markdown.html#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>Water</span>
-<span id="cb12-27"><a href="markdown.html#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
-<span id="cb12-28"><a href="markdown.html#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
-<span id="cb12-29"><a href="markdown.html#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
-<span id="cb12-30"><a href="markdown.html#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
-<span id="cb12-31"><a href="markdown.html#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Water</span>
-<span id="cb12-32"><a href="markdown.html#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    2. </span>Water</span>
-<span id="cb12-33"><a href="markdown.html#cb12-33" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-34"><a href="markdown.html#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## 表格</span></span>
-<span id="cb12-35"><a href="markdown.html#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-36"><a href="markdown.html#cb12-36" aria-hidden="true" tabindex="-1"></a>| Water | *Water* | Water |</span>
-<span id="cb12-37"><a href="markdown.html#cb12-37" aria-hidden="true" tabindex="-1"></a>|---------|---------|---------|</span>
-<span id="cb12-38"><a href="markdown.html#cb12-38" aria-hidden="true" tabindex="-1"></a>| Water | Water | Water |</span>
-<span id="cb12-39"><a href="markdown.html#cb12-39" aria-hidden="true" tabindex="-1"></a>| **Water** | Water^<span class="co">[</span><span class="ot">Water</span><span class="co">]</span> | Water |</span>
-<span id="cb12-40"><a href="markdown.html#cb12-40" aria-hidden="true" tabindex="-1"></a>| Water | Water | Water |</span>
-<span id="cb12-41"><a href="markdown.html#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="markdown.html#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 引语</span></span>
-<span id="cb12-43"><a href="markdown.html#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-44"><a href="markdown.html#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 知之为知之，不知为不知，是知也^</span><span class="co">[</span><span class="ot">你知道最后一个「知」怎么念吗？</span><span class="co">]</span><span class="at">。 — 孔子</span></span>
-<span id="cb12-45"><a href="markdown.html#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-46"><a href="markdown.html#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## 链接</span></span>
-<span id="cb12-47"><a href="markdown.html#cb12-47" aria-hidden="true" tabindex="-1"></a>这是<span class="co">[</span><span class="ot">一个超链接</span><span class="co">](https://github.com/)</span></span>
-<span id="cb12-48"><a href="markdown.html#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-49"><a href="markdown.html#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## 插入图片</span></span>
-<span id="cb12-50"><a href="markdown.html#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="in">`![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)`</span>:</span>
-<span id="cb12-51"><a href="markdown.html#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-52"><a href="markdown.html#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="al">![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="markdown.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 第一级标题</span></span>
+<span id="cb13-2"><a href="markdown.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## 第二级标题</span></span>
+<span id="cb13-3"><a href="markdown.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 第三级标题</span></span>
+<span id="cb13-4"><a href="markdown.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 第四级标题</span></span>
+<span id="cb13-5"><a href="markdown.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 第五级标题</span></span>
+<span id="cb13-6"><a href="markdown.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">###### 第六级标题</span></span>
+<span id="cb13-7"><a href="markdown.html#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="markdown.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 粗体、斜体</span></span>
+<span id="cb13-9"><a href="markdown.html#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**粗体**</span>
+<span id="cb13-10"><a href="markdown.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*斜体*</span>
+<span id="cb13-11"><a href="markdown.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>***粗斜体***</span>
+<span id="cb13-12"><a href="markdown.html#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>~~删除~~</span>
+<span id="cb13-13"><a href="markdown.html#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="markdown.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 列表</span></span>
+<span id="cb13-15"><a href="markdown.html#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="markdown.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
+<span id="cb13-17"><a href="markdown.html#cb13-17" aria-hidden="true" tabindex="-1"></a>   列表内想有缩进内容，但是不想让内容前有列表标记的话，只需要在这一行空三格。</span>
+<span id="cb13-18"><a href="markdown.html#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="markdown.html#cb13-19" aria-hidden="true" tabindex="-1"></a>   缩进内容想要有间隔的话，两段内要有一个空行。</span>
+<span id="cb13-20"><a href="markdown.html#cb13-20" aria-hidden="true" tabindex="-1"></a>   这一行没有空行，所以就没有间隔。</span>
+<span id="cb13-21"><a href="markdown.html#cb13-21" aria-hidden="true" tabindex="-1"></a>   看到了吧？</span>
+<span id="cb13-22"><a href="markdown.html#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
+<span id="cb13-23"><a href="markdown.html#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
+<span id="cb13-24"><a href="markdown.html#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Water</span>
+<span id="cb13-25"><a href="markdown.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Water</span>
+<span id="cb13-26"><a href="markdown.html#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  3. </span>Water</span>
+<span id="cb13-27"><a href="markdown.html#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Water</span>
+<span id="cb13-28"><a href="markdown.html#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
+<span id="cb13-29"><a href="markdown.html#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
+<span id="cb13-30"><a href="markdown.html#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Water</span>
+<span id="cb13-31"><a href="markdown.html#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Water</span>
+<span id="cb13-32"><a href="markdown.html#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    2. </span>Water</span>
+<span id="cb13-33"><a href="markdown.html#cb13-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-34"><a href="markdown.html#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## 表格</span></span>
+<span id="cb13-35"><a href="markdown.html#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="markdown.html#cb13-36" aria-hidden="true" tabindex="-1"></a>| Water | *Water* | Water |</span>
+<span id="cb13-37"><a href="markdown.html#cb13-37" aria-hidden="true" tabindex="-1"></a>|---------|---------|---------|</span>
+<span id="cb13-38"><a href="markdown.html#cb13-38" aria-hidden="true" tabindex="-1"></a>| Water | Water | Water |</span>
+<span id="cb13-39"><a href="markdown.html#cb13-39" aria-hidden="true" tabindex="-1"></a>| **Water** | Water^<span class="co">[</span><span class="ot">Water</span><span class="co">]</span> | Water |</span>
+<span id="cb13-40"><a href="markdown.html#cb13-40" aria-hidden="true" tabindex="-1"></a>| Water | Water | Water |</span>
+<span id="cb13-41"><a href="markdown.html#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="markdown.html#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## 引语</span></span>
+<span id="cb13-43"><a href="markdown.html#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="markdown.html#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 知之为知之，不知为不知，是知也^</span><span class="co">[</span><span class="ot">你知道最后一个「知」怎么念吗？</span><span class="co">]</span><span class="at">。 — 孔子</span></span>
+<span id="cb13-45"><a href="markdown.html#cb13-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-46"><a href="markdown.html#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## 链接</span></span>
+<span id="cb13-47"><a href="markdown.html#cb13-47" aria-hidden="true" tabindex="-1"></a>这是<span class="co">[</span><span class="ot">一个超链接</span><span class="co">](https://github.com/)</span></span>
+<span id="cb13-48"><a href="markdown.html#cb13-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-49"><a href="markdown.html#cb13-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## 插入图片</span></span>
+<span id="cb13-50"><a href="markdown.html#cb13-50" aria-hidden="true" tabindex="-1"></a><span class="in">`![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)`</span>:</span>
+<span id="cb13-51"><a href="markdown.html#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-52"><a href="markdown.html#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="al">![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)</span></span></code></pre></div>
 
 </div>
 </div>
+
 
 
 
@@ -441,7 +449,8 @@ for (let i = 0; i < 5; i++){
 <li id="fn1"><p>Water<a href="markdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>你知道最后一个「知」怎么念吗？<a href="markdown.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>抱歉，我忘记具体哪一篇了<a href="markdown.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>你现在看到的内容是 <code>bookdown</code> 渲染出来的效果，所以上面 那副图底下你能看到<code>[]</code> 里面的内容成了文字说明。<a href="markdown.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>在中国常用的问候语<a href="markdown.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>你现在看到的内容是 <code>bookdown</code> 渲染出来的效果，所以上面 那副图底下你能看到<code>[]</code> 里面的内容成了文字说明。<a href="markdown.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

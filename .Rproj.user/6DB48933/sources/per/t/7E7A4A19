@@ -1,9 +1,9 @@
 {
     "id": "7E7A4A19",
-    "path": "~/Desktop/jiangtao/02-mark.Rmd",
+    "path": "~/Desktop/intro2code/02-mark.Rmd",
     "project_path": "02-mark.Rmd",
     "type": "r_markdown",
-    "hash": "219958972",
+    "hash": "3921424325",
     "contents": "",
     "dirty": false,
     "created": 1610486407121.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "184,20",
-        "scrollLine": "180"
+        "cursorPosition": "178,0",
+        "scrollLine": "174"
     },
     "folds": "",
-    "lastKnownWriteTime": 1610493521,
+    "lastKnownWriteTime": 1610494016,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1610493521306,
+    "last_content_update": 1610494016077,
     "read_only": false,
     "read_only_alternatives": []
 }

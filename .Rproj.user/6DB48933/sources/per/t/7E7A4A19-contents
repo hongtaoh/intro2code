@@ -173,6 +173,16 @@ for (let i = 0; i < 5; i++){
 
 我在这里没法展示源代码，只能像上面一样展示结果。源代码可以参考 [这里](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting)。
 
+### 注释
+
+注释只需要在需要注释文字的后面加 `^[这里输入注释文字]`。这个上面其实已经有例子了。不过我再举一个：
+
+```{markdown}
+你好吗^[在中国常用的问候语]？
+```
+
+你好吗^[在中国常用的问候语]？
+
 ### HTML
 
 最重要的一点，Markdown 可以识别 `HTML` 代码。也就是说，你把 Markdown 当成 `HTML` 来写也可以。
@@ -186,7 +196,8 @@ for (let i = 0; i < 5; i++){
 </figure>
 ```
 
-以上代码来自 `https://stackoverflow.com/a/19360305`。
+以上代码来自 https://stackoverflow.com/a/19360305。
+
 
 ## 自己试一下
 
