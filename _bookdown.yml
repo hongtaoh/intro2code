@@ -1,6 +1,6 @@
 book_filename: "d3book"
 repo: https://github.com/hongtaoh/d3book
-output_dir: docs
+output_dir: _book
 language:
   ui:
     edit: "编辑"
