@@ -1,0 +1,8 @@
+book_filename: "d3book"
+repo: https://github.com/hongtaoh/d3book
+output_dir: _book
+language:
+  ui:
+    edit: "编辑"
+    chapter_name: ["第 ", " 章"]
+delete_merged_file: true

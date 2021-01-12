@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 1 章 前期准备 | 小白编程指南</title>
+  <meta name="description" content="This is Hongtao Hao’s notes on Scott Murray’s D3 Book" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 1 章 前期准备 | 小白编程指南" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is Hongtao Hao’s notes on Scott Murray’s D3 Book" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 1 章 前期准备 | 小白编程指南" />
+  
+  <meta name="twitter:description" content="This is Hongtao Hao’s notes on Scott Murray’s D3 Book" />
+  
+
+<meta name="author" content="郝鸿涛" />
+
+
+<meta name="date" content="2021-01-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="markdown.html"/>
+<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">d3book companion</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>小白编程指南</a></li>
+<li class="chapter" data-level="1" data-path="prep.html"><a href="prep.html"><i class="fa fa-check"></i><b>1</b> 前期准备</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="prep.html"><a href="prep.html#github"><i class="fa fa-check"></i><b>1.1</b> GitHub</a></li>
+<li class="chapter" data-level="1.2" data-path="prep.html"><a href="prep.html#terminal"><i class="fa fa-check"></i><b>1.2</b> 终端</a></li>
+<li class="chapter" data-level="1.3" data-path="prep.html"><a href="prep.html#text-editor"><i class="fa fa-check"></i><b>1.3</b> 文本编辑器</a></li>
+<li class="chapter" data-level="1.4" data-path="prep.html"><a href="prep.html#English"><i class="fa fa-check"></i><b>1.4</b> 英语</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>2</b> Markdown 试水</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="markdown.html"><a href="markdown.html#markdown-编辑器"><i class="fa fa-check"></i><b>2.1</b> Markdown 编辑器</a></li>
+<li class="chapter" data-level="2.2" data-path="markdown.html"><a href="markdown.html#md-exercise"><i class="fa fa-check"></i><b>2.2</b> Markdown 语法讲解</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="markdown.html"><a href="markdown.html#标题"><i class="fa fa-check"></i><b>2.2.1</b> 标题</a></li>
+<li class="chapter" data-level="2.2.2" data-path="markdown.html"><a href="markdown.html#粗体斜体"><i class="fa fa-check"></i><b>2.2.2</b> 粗体、斜体</a></li>
+<li class="chapter" data-level="2.2.3" data-path="markdown.html"><a href="markdown.html#列表"><i class="fa fa-check"></i><b>2.2.3</b> 列表</a></li>
+<li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.4</b> 表格</a></li>
+<li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.5</b> 引语</a></li>
+<li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.6</b> 链接</a></li>
+<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#插入图片"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
+<li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.8</b> 代码</a></li>
+<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.9</b> HTML</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="markdown.html"><a href="markdown.html#自己试一下"><i class="fa fa-check"></i><b>2.3</b> 自己试一下</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Book made with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">小白编程指南</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="prep" class="section level1" number="1">
+<h1><span class="header-section-number">第 1 章</span> 前期准备</h1>
+<div id="github" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> GitHub</h2>
+<p>请注册一个 <a href="https://github.com/">GitHub</a> 账号，编程的入门票。用户名请认真起。如果你之后建个人网站不想买域名的话，你可以用免费的 <code>你的用户名.github.io</code>。所以如果用户名起得很丑的话，你个人网站的未来网址相应地也会很丑。</p>
+</div>
+<div id="terminal" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> 终端</h2>
+<p>如果你用的苹果系统或者 Linux 系统，终端 (Terminal) 是自带的。如果你用的是 Windows 系统，终端的选取可以看看 <a href="https://www.v2ex.com/t/514297">这个讨论</a>。我不怎么用 Windows，所以不是特别了解。上述讨论中 <a href="https://docs.microsoft.com/zh-cn/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1">powershell</a>, <a href="https://cmder.net/">cmder</a>, <a href="https://github.com/mintty/wsltty">wsltty</a> 和 git bash 出现的频率比较高。你可以自己试试看哪个好用。</p>
+</div>
+<div id="text-editor" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> 文本编辑器</h2>
+<p>文本编辑器 (Text Editor) 是程序员用来吃饭的家伙。每个人的喜好不同，<a href="https://www.sublimetext.com/">Sublime Text</a>, <a href="https://code.visualstudio.com/">VS Code</a> 和 <a href="https://www.vim.org/download.php">vim</a> 这三个貌似很多人用，而且也都是免费的。我比较习惯用 Sublime Text。</p>
+</div>
+<div id="English" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> 英语</h2>
+<p>如果你对编程是认真的，不要抗拒学英语。你现在看到的主要编程语言，<code>Java</code>, <code>Python</code>, <code>Ruby</code>, <code>Go</code>, <code>JavaScript</code>, <code>R</code>, <code>C</code> 等都是西方人创造的，因此最主要和最新的学习资料肯定是英文的。编译类的教材在一定程度上可以缓解这个问题，但当资料非常新的时候，你只能眼巴巴地等翻译。其次，GitHub 上主要开源项目的文档是英文的，这个估计不会有人会去翻译。如果你看不懂，就没办法使用，在使用中碰到问题也没办法跟原作者沟通。另外，学编程就是一个持续不断碰到问题、解决问题的过程，而很多你碰到的问题早就有人在 <a href="https://stackoverflow.com/">StackOverflow</a>上（用英语）问过和回答过了。</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/hongtaoh/d3book/edit/master/01-prep.Rmd",
+"text": "编辑"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
