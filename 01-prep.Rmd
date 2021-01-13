@@ -6,7 +6,7 @@
 
 ## 终端{#terminal}
 
-如果你用的苹果系统或者 Linux 系统，终端 (Terminal) 是自带的。如果你用的是 Windows 系统，终端的选取可以看看 [这个讨论](https://www.v2ex.com/t/514297)。我不怎么用 Windows，所以不是特别了解。上述讨论中 [powershell](https://docs.microsoft.com/zh-cn/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1), [cmder](https://cmder.net/), [wsltty](https://github.com/mintty/wsltty) 和 git bash 出现的频率比较高。你可以自己试试看哪个好用。
+如果你用的是苹果系统或者 Linux 系统，终端 (Terminal) 是自带的。如果你用的是 Windows 系统，终端的选取可以看看 [这个讨论](https://www.v2ex.com/t/514297)。我不怎么用 Windows，所以不是特别了解。上述讨论中 [powershell](https://docs.microsoft.com/zh-cn/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-7.1), [cmder](https://cmder.net/), [wsltty](https://github.com/mintty/wsltty) 和 git bash 出现的频率比较高。你可以自己试试看哪个好用。
 
 ## 文本编辑器{#text-editor}
 

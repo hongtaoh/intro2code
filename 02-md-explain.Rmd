@@ -22,7 +22,7 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 
 想看一下效果的话，你可以看看我用 Typora 写的 [Markdown 文本](https://hongtaoh.com/files/apad/emotion_contagions.md)，转成 [HTML](https://hongtaoh.com/files/apad/emotion_contagions.html) 和 [PDF](https://hongtaoh.com/files/apad/emotion_contagions.pdf) 后的样子。
 
-## Markdown 语法讲解{#md-exercise}
+## Markdown 语法讲解{#md-grammer}
 
 ### 标题
 
@@ -145,7 +145,7 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 
 有同学会问， `[]` 为什么还要加内容呢？直接在 `()` 加入链接不就好了吗？不完全是。我一开始也不理解为什么还需要 `[]`。现在，我的理解是，`[]` 里的内容是对要加入图片的解释。什么时候会用到呢？两种情况：
 
-1. 你输入的图片链接失效。这个其实挺常见的。除非你是本地图片，你自己可以掌控。如果向上面一样，是用的网上的链接，那这个链接随时可能失效。失效后别人就无法知道你插入的图片内容为何。如果你在 `[]` 有图说的话，浏览器会在图片位置显示你的图说；
+1. 你输入的图片链接失效。这个其实挺常见的。除非你是本地图片，你自己可以掌控。如果像上面一样，是用的网上的链接，那这个链接随时可能失效。失效后别人就无法知道你插入的图片内容是什么。如果你在 `[]` 有图说的话，浏览器会在图片位置显示你的图说；
 
 2. [谢益辉](https://yihui.org/) 在 [他的博客](https://yihui.org/cn/) 中提到^[抱歉，我忘记具体哪一篇了]，`[]` 里面的内容可以被专用浏览器读给盲人用户。
 
@@ -198,10 +198,19 @@ for (let i = 0; i < 5; i++){
 
 以上代码来自 https://stackoverflow.com/a/19360305。
 
+### 分割线
 
-## 自己试一下
+```{markdown}
+*** 或者 ---
+```
 
-你自己把下面的内容复制粘贴到 `https://stackedit.io/app#`，看看右边出来的结果就大体了解了。
+***
+
+---
+
+## 自己试一下{#try-yourself}
+
+你自己把下面的内容复制粘贴到 <https://stackedit.io/app#>，看看右边出来的结果就大体了解了。进入页面后，记得先把网页左边的内容用全选然后删除，再粘贴以下内容。
 
 ```{markdown}
 # 第一级标题
@@ -253,11 +262,56 @@ for (let i = 0; i < 5; i++){
 这是[一个超链接](https://github.com/)
 
 ## 插入图片
-`![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)`:
 
 ![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)
+    
+## 分割线
 
+*** 
+      
+或者
 
+---
 ```
+
+## Markdown 练习{#md-exercise}
+
+请用 Markdown 写出如下文稿。需要注意的是：
+
+1. 标题前、脚注上的序号不用管
+3. 个人照片下的文字「王大锤的个人照片」在最后结果中有没有无所谓
+
+你可以在 <https://stackedit.io/app#> 在线制作，也可以使用 Typora 在本地制作。不过， [Typora 的脚注](https://support.typora.io/Markdown-Reference/#footnotes) 比较麻烦一些。
+
+以下内容部分参考百度百科 [王大锤](https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4) 这一次词条解释。
+
+### 王大锤简历 
+
+以上是一级标题，以下全都是二级标题。
+
+#### 基本信息
+- 身高：170
+- 体重：60 *公斤* ^[注意：「公斤」是斜体。]
+- 性别：**男** ^[注意：「男」是粗体。]
+- 出生日期：~~2000年0月0日~~
+- 出演作品
+   1. 《万万没想到》
+   2. 《暴走大事件》
+
+#### 个人照片
+![王大锤个人照片](https://imgsa.baidu.com/forum/w%3D580/sign=388463e1c4ea15ce41eee00186013a25/e09c073b5bb5c9ea2e710e87d839b6003bf3b3df.jpg)
+
+[图片出处](https://imgsa.baidu.com/forum/w%3D580/sign=388463e1c4ea15ce41eee00186013a25/e09c073b5bb5c9ea2e710e87d839b6003bf3b3df.jpg)
+
+#### 作品简介
+| 角色 | 形象 | 元素 |
+|-----|---------|---------|
+| 刘备 | 自恋 | 搞笑 |
+| 月老童子 | 幻想 | 职场 |
+| 富二代 | 眼高手低 | 感情 |
+
+#### 常用语
+> 万万没想到 — 王大锤
+
 
 

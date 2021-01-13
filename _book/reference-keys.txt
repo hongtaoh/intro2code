@@ -5,7 +5,7 @@ text-editor
 English
 markdown
 markdown-编辑器
-md-exercise
+md-grammer
 标题
 粗体斜体
 列表
@@ -16,4 +16,11 @@ md-exercise
 代码
 注释
 html
-自己试一下
+分割线
+try-yourself
+md-exercise
+王大锤简历
+基本信息
+个人照片
+作品简介
+常用语

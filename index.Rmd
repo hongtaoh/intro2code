@@ -1,5 +1,5 @@
 --- 
-title: "小白编程指南"
+title: "编程小白实用入门指南"
 author: "郝鸿涛"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
