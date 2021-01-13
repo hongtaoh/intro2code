@@ -7,7 +7,7 @@ output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
 link-citations: yes
-# github-repo: hongtaoh/d3book
+github-repo: hongtaoh/intro2code
 description: "This is Hongtao Hao's notes on Scott Murray's D3 Book"
 ---
 
