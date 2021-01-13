@@ -17,7 +17,6 @@ md-grammer
 注释
 html
 分割线
-try-yourself
 md-exercise
 王大锤简历
 基本信息
