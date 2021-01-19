@@ -10,15 +10,15 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 
 1. [Markdown 是个啥](https://cosx.org/contribute/#markdown), 来自统计之都，作者是 [谢益辉](https://yihui.org/)
 
-2. [Markdown 基本语法](https://github.com/younghz/Markdown), 作者为 [younghz](https://github.com/younghz)
+2. [Markdown 基本语法](https://github.com/younghz/Markdown), 作者是 [younghz](https://github.com/younghz)
 
 如果你不介意看英文资料的话，
 
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，作者为 [adam-p](https://github.com/adam-p)
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)，作者是 [adam-p](https://github.com/adam-p)
 
 ## Markdown 编辑器
 
-你可以用前面提到的文本编辑器来写 Markdown 文件，缺点是你看不到实时的结果。如果你想看到实时的效果，我推荐用 [Typora](https://typora.io/), 开源、轻巧、免费、主题多样，而且可以非常方便得转成 HTML 和 PDF。你也可以在 [stackedit.io](https://stackedit.io/app#) 在线写 Markdown 文件。如果你平常用 Markdown 比较多，推荐用 Typora 在本地写。
+你可以用上一节提到的文本编辑器来写 Markdown 文件，缺点是你看不到实时的结果。如果你想看到实时的效果，我推荐用 [Typora](https://typora.io/), 开源、轻巧、免费、主题多样，而且可以非常方便得转成 HTML 和 PDF。你也可以在 [stackedit.io](https://stackedit.io/app#) 在线写 Markdown 文件。如果你平常用 Markdown 比较多，推荐用 Typora 在本地写。不过我自己很少用 Typora, 实时预览的效果的确好，但是当你想修改内容的时候，你会发现很不方便。
 
 想看一下效果的话，你可以看看我用 Typora 写的 [Markdown 文本](https://hongtaoh.com/files/apad/emotion_contagions.md)，转成 [HTML](https://hongtaoh.com/files/apad/emotion_contagions.html) 和 [PDF](https://hongtaoh.com/files/apad/emotion_contagions.pdf) 后的样子。
 
@@ -113,7 +113,7 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 | Water | *Water* | Water |
 |---------|---------|---------|
 | Water | Water | Water |
-| **Water** | Water^[Water] | Water |
+| **Water** | Water ^[Water] | Water |
 | Water | Water | Water |
 
 如果你不会自己打出 Markdown 表格，可以试试这个傻瓜式 [Markdown 表格生成器](https://www.tablesgenerator.com/markdown_tables)。
@@ -122,10 +122,10 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 ### 引语
 
 ```{markdown}
-> 知之为知之，不知为不知，是知也^[你知道最后一个「知」怎么念吗？]。 — 孔子
+> 知之为知之，不知为不知，是知也 ^[你知道最后一个「知」怎么念吗？]。 — 孔子
 ```
 
-> 知之为知之，不知为不知，是知也^[你知道最后一个「知」怎么念吗？]。 — 孔子
+> 知之为知之，不知为不知，是知也 ^[你知道最后一个「知」怎么念吗？]。 — 孔子
 
 ### 链接
 
@@ -147,7 +147,7 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 
 1. 你输入的图片链接失效。这个其实挺常见的。除非你是本地图片，你自己可以掌控。如果像上面一样，是用的网上的链接，那这个链接随时可能失效。失效后别人就无法知道你插入的图片内容是什么。如果你在 `[]` 有图说的话，浏览器会在图片位置显示你的图说；
 
-2. [谢益辉](https://yihui.org/) 在 [他的博客](https://yihui.org/cn/) 中提到^[抱歉，我忘记具体哪一篇了]，`[]` 里面的内容可以被专用浏览器读给盲人用户。
+2. [谢益辉](https://yihui.org/) 在 [他的博客](https://yihui.org/cn/) 中提到 ^[抱歉，我忘记具体哪一篇了]，`[]` 里面的内容可以被专用浏览器读给盲人用户。
 
 ### 代码
 
@@ -178,16 +178,16 @@ for (let i = 0; i < 5; i++){
 注释只需要在需要注释文字的后面加 `^[这里输入注释文字]`。这个上面其实已经有例子了。不过我再举一个：
 
 ```{markdown}
-你好吗^[在中国常用的问候语]？
+你好吗 ^[在中国常用的问候语]？
 ```
 
-你好吗^[在中国常用的问候语]？
+你好吗 ^[在中国常用的问候语]？
 
 ### HTML
 
 最重要的一点，Markdown 可以识别 `HTML` 代码。也就是说，你把 Markdown 当成 `HTML` 来写也可以。
 
-比如，插入图片时，Markdown 本身的 `![]()` 是不支持你加入图片说明文字的^[你现在看到的内容是 `bookdown` 渲染出来的效果，所以上面 那副图底下你能看到`[]` 里面的内容成了文字说明。]。这时候你就可以直接用原生的 `HTML` 代码：
+比如，插入图片时，Markdown 本身的 `![]()` 是不支持你加入图片说明文字的 ^[你现在看到的内容是 `bookdown` 渲染出来的效果，所以上面 那副图底下你能看到`[]` 里面的内容成了文字说明。]。这时候你就可以直接用原生的 `HTML` 代码：
 
 ```{html}
 <figure>
@@ -198,7 +198,7 @@ for (let i = 0; i < 5; i++){
 
 以上代码来自 https://stackoverflow.com/a/19360305。
 
-### 分割线
+### 分隔线
 
 ```{markdown}
 *** 
@@ -223,11 +223,11 @@ for (let i = 0; i < 5; i++){
 
 你可以在 <https://stackedit.io/app#> 在线制作，也可以使用 Typora 在本地制作。不过， [Typora 的脚注](https://support.typora.io/Markdown-Reference/#footnotes) 比较麻烦一些。
 
-以下内容部分参考百度百科 [王大锤](https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4) 这一次词条解释。
-
 ### 王大锤简历 
 
 以上是一级标题，以下全都是二级标题。
+
+免责声明：以下内容部分参考百度百科 [王大锤](https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4) 这一次词条解释。
 
 #### 基本信息
 - 身高：170

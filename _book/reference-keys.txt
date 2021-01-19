@@ -1,3 +1,9 @@
+fig:new-repo
+fig:new-repo-new
+fig:new-repo-url
+fig:new-repo-index
+fig:new-repo-gh-pages-01
+fig:new-repo-gh-pages-02
 prep
 github
 terminal
@@ -16,10 +22,13 @@ md-grammer
 代码
 注释
 html
-分割线
+分隔线
 md-exercise
 王大锤简历
 基本信息
 个人照片
 作品简介
 常用语
+html-basics
+html-in-practice
+gh-pages-updating

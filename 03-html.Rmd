@@ -1,0 +1,82 @@
+# HTML 基本知识{#html-basics}
+
+如果使用 Typora 完成的之前布置的Markdown 的作业，答案请参考[这里](static/files/wangdachui.md)。请检查下是否和你的答案一致。
+
+用 Typora 打开这份 Markdown 文档后，选择 文件 (File) $\to$ 导出 (Export) $\to$ HTML (without styles). 导出后的 `HTML` 文档应该是[这样](static/files/wangdachui.html)。
+
+用浏览器打开这份 HTML 文档，你可以看到和你在 [2.3 Markdown 练习中](markdown.html#md-exercise) 看到的结果一致。你现在看到的就是一个最基本的网页了。
+
+## 做货真价实的网页{#html-in-practice}
+
+在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。
+
+第一步，在你的电脑上创建一个文件夹，将其命名为 wangdachui。然后把刚才导出的 HTML 文件重新命名为 `index.html` 并放到 wangdachui 这个文件夹。
+
+第二步，请确保你已经有了一个 [GitHub](https://github.com/) 账号。登陆之后，在屏幕右上角你的 GitHub 头像左侧有一个 $+$ 的标志。点击它，然后选择 New repository。在出现的页面中，在 Repository name 那里填上 wangdachui 或者任何你觉得合适的名字。其它都不要动，然后点击 Create repository。在随后出现的页面中，在 "Quick setup — if you've done this kind of thing before" 下面那一行，HTTP/SSH 后面有个网址，应该是 https://github.com/hongtaoh/wangdachui.git 这样的形式。把这个网址复制下来。
+
+```{r new-repo, echo=FALSE, fig.cap="登陆 GitHub 之后，选择 New repository", fig.align='center', out.width = "50%"}
+knitr::include_graphics('https://hongtaoh.com/media/netlify/deploy-1.png')
+```
+
+```{r new-repo-new, echo=FALSE, fig.cap="新建仓库设置", fig.align='center', out.width = "80%"}
+knitr::include_graphics('static/img/new-repo-name.png')
+```
+
+```{r new-repo-url, echo=FALSE, fig.cap="新建仓库 URL", fig.align='center', out.width = "100%"}
+knitr::include_graphics('static/img/new-repo-url.png')
+```
+
+第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看[这里](https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87)。使用Windows 系统的同学，打开你选择的[终端工具](prep.html#terminal)。
+
+打开终端之后：
+
+- 使用苹果电脑的同学，我建议你把 `wangdachui` 这个文件夹拖到桌面上，然后在 Terminal 中输入：
+
+   ```{bash eval=FALSE}
+   cd Desktop/wangdachui
+   ```
+- 使用 Windowns 系统的同学，打开了 PowerShell 或其它终端后，加入你把 `wangdachui` 这个文件夹在你的 `H` 盘，那么，请在 PowerShell 或其它终端中输入：
+
+   ```{bash eval=FALSE}
+   cd H:\wangdachui
+   ```
+
+`cd` 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。
+
+随后，不管你的电脑是什么系统，请在你的终端中输入：
+
+```{bash eval=FALSE}
+git add . # 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。
+# 上一行代码是告诉 git，刚才新加的全部内容都要上传
+git commit -m "第一次上传"
+# 上一行代码是给这次上传添加备注。一个 git 项目可能我们要上传好多次，每次上传不同的内容。
+# 备注可以让我们在之后很方便地看到每次上传的内容是什么。
+```
+
+这个代码块你直接复制粘贴就行。`#` 的部分会被终端自动识别为备注文本，因此不用担心。
+
+现在，请拿出刚才你复制的类似 https://github.com/hongtaoh/wangdachui.git 的网址链接，我们接下来要用到。如果你的仓库名也是 `wangdachui` 的话，那么 https://github.com/hongtaoh/wangdachui.git 这个链接中你只需要把我的 GitHub 用户名 `hongtaoh` 换成你的就行。
+
+```{bash eval=FALSE}
+git remote add origin https://github.com/hongtaoh/wangdachui.git
+# 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！
+git push -u origin master
+```
+
+上面两行代码复制粘贴到你的终端，运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
+
+```{r new-repo-index, echo=FALSE, fig.cap="index.html 上传成功的页面", fig.align='center', out.width = "100%"}
+knitr::include_graphics('static/img/new-repo-index.png')
+```
+
+现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 "Your site is ready to be published at http://你的用户名.github.io/wangdachui/"。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 "Your site is published at ..." 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，这个网页别人也能看到了。
+
+```{r new-repo-gh-pages-01, echo=FALSE, fig.cap="点击 None, 选择 master", fig.align='center', out.width = "90%"}
+knitr::include_graphics('static/img/gh-pages-01.png')
+```
+
+```{r new-repo-gh-pages-02, echo=FALSE, fig.cap="部署成功后的页面", fig.align='center', out.width = "100%"}
+knitr::include_graphics('static/img/gh-pages-02.png')
+```
+
+## 内容更新{#gh-pages-updating}

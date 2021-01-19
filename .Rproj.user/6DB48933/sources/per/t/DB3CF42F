@@ -3,7 +3,7 @@
     "path": "~/Desktop/intro2code/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "1579612747",
+    "hash": "1100232547",
     "contents": "",
     "dirty": false,
     "created": 1610485995946.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "1,18",
+        "cursorPosition": "8,19",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1610577715,
+    "lastKnownWriteTime": 1610578368,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1610577715204,
+    "last_content_update": 1610578368026,
     "read_only": false,
     "read_only_alternatives": []
 }
