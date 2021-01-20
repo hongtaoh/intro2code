@@ -37,11 +37,15 @@ knitr::include_graphics('static/img/new-repo-url.png')
    ```{bash eval=FALSE}
    cd Desktop/wangdachui
    ```
+
+- 使用 Windowns 系统的同学，如果你选择使用 PowerShell, 请先阅读 [这里](https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A%3A-%E5%9C%A8%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Git-Git-%E5%9C%A8-PowerShell-%E4%B8%AD%E4%BD%BF%E7%94%A8-Git)。PowerShell 配备了 Git 之后，终端才能执行以下的代码。
+
 - 使用 Windowns 系统的同学，打开了 [Cmder](https://cmder.net/) 或其它终端后，加入你把 `wangdachui` 这个文件夹在你的 `H` 盘，那么，请在 [Cmder](https://cmder.net/) 或其它终端中输入：
 
    ```{bash eval=FALSE}
    cd H:\wangdachui
    ```
+   
 如果你不确定路径是什么，输完 `cd` 之后，按一下空格，然后直接把 `wangdachui` 这个文件夹拖到终端中，路径会自动显示出来。
 
 `cd` 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。
