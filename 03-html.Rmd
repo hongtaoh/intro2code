@@ -30,40 +30,44 @@ knitr::include_graphics('static/img/new-repo-url.png')
 
 打开终端之后：
 
+- 如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 [这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE) 或 [这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
+
 - 使用苹果电脑的同学，我建议你把 `wangdachui` 这个文件夹拖到桌面上，然后在 Terminal 中输入：
 
    ```{bash eval=FALSE}
    cd Desktop/wangdachui
    ```
-- 使用 Windowns 系统的同学，打开了 PowerShell 或其它终端后，加入你把 `wangdachui` 这个文件夹在你的 `H` 盘，那么，请在 PowerShell 或其它终端中输入：
+- 使用 Windowns 系统的同学，打开了 [Cmder](https://cmder.net/) 或其它终端后，加入你把 `wangdachui` 这个文件夹在你的 `H` 盘，那么，请在 [Cmder](https://cmder.net/) 或其它终端中输入：
 
    ```{bash eval=FALSE}
    cd H:\wangdachui
    ```
+如果你不确定路径是什么，输完 `cd` 之后，按一下空格，然后直接把 `wangdachui` 这个文件夹拖到终端中，路径会自动显示出来。
 
 `cd` 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。
+
+现在，请拿出刚才你复制的类似 https://github.com/hongtaoh/wangdachui.git 的网址链接，我们接下来要用到。如果你的仓库名也是 `wangdachui` 的话，那么 https://github.com/hongtaoh/wangdachui.git 这个链接中你只需要把我的 GitHub 用户名 `hongtaoh` 换成你的就行。
 
 随后，不管你的电脑是什么系统，请在你的终端中输入：
 
 ```{bash eval=FALSE}
-git add . # 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。
-# 上一行代码是告诉 git，刚才新加的全部内容都要上传
-git commit -m "第一次上传"
-# 上一行代码是给这次上传添加备注。一个 git 项目可能我们要上传好多次，每次上传不同的内容。
-# 备注可以让我们在之后很方便地看到每次上传的内容是什么。
-```
-
-这个代码块你直接复制粘贴就行。`#` 的部分会被终端自动识别为备注文本，因此不用担心。
-
-现在，请拿出刚才你复制的类似 https://github.com/hongtaoh/wangdachui.git 的网址链接，我们接下来要用到。如果你的仓库名也是 `wangdachui` 的话，那么 https://github.com/hongtaoh/wangdachui.git 这个链接中你只需要把我的 GitHub 用户名 `hongtaoh` 换成你的就行。
-
-```{bash eval=FALSE}
+git init
+git add .
+git commit -m "my first commit."
 git remote add origin https://github.com/hongtaoh/wangdachui.git
 # 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！
 git push -u origin master
 ```
 
-上面两行代码复制粘贴到你的终端，运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
+这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。
+
+上面几行代码需要注意的是：
+1. `git init` 是创建一个 git 项目。`init` 应该是 initiate 的缩写。
+2. `git add .`: 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。这行代码是告诉 git，刚才新加的全部内容都要上传
+3. `git commit -m "my first commit."` 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。
+4. **第四行代码一定要替换为你自己的链接！！！！！！**
+
+上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
 
 ```{r new-repo-index, echo=FALSE, fig.cap="index.html 上传成功的页面", fig.align='center', out.width = "100%"}
 knitr::include_graphics('static/img/new-repo-index.png')

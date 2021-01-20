@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-01-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -221,24 +221,29 @@ Figure 3.3: 新建仓库 URL
 <p>第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看<a href="https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87">这里</a>。使用Windows 系统的同学，打开你选择的<a href="prep.html#terminal">终端工具</a>。</p>
 <p>打开终端之后：</p>
 <ul>
+<li><p>如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 <code>git config --global user.name "你的git用户名"</code>, 以及 <code>git config --global user.email "你的邮箱"</code>。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a> 或 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a>。</p></li>
 <li><p>使用苹果电脑的同学，我建议你把 <code>wangdachui</code> 这个文件夹拖到桌面上，然后在 Terminal 中输入：</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="html-basics.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Desktop/wangdachui</span></code></pre></div></li>
-<li><p>使用 Windowns 系统的同学，打开了 PowerShell 或其它终端后，加入你把 <code>wangdachui</code> 这个文件夹在你的 <code>H</code> 盘，那么，请在 PowerShell 或其它终端中输入：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:\wangdachui</span></code></pre></div></li>
+<li><p>使用 Windowns 系统的同学，打开了 <a href="https://cmder.net/">Cmder</a> 或其它终端后，加入你把 <code>wangdachui</code> 这个文件夹在你的 <code>H</code> 盘，那么，请在 <a href="https://cmder.net/">Cmder</a> 或其它终端中输入：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:\wangdachui</span></code></pre></div>
+<p>如果你不确定路径是什么，输完 <code>cd</code> 之后，按一下空格，然后直接把 <code>wangdachui</code> 这个文件夹拖到终端中，路径会自动显示出来。</p></li>
 </ul>
 <p><code>cd</code> 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。</p>
-<p>随后，不管你的电脑是什么系统，请在你的终端中输入：</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="html-basics.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add . <span class="co"># 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。</span></span>
-<span id="cb16-2"><a href="html-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 上一行代码是告诉 git，刚才新加的全部内容都要上传</span></span>
-<span id="cb16-3"><a href="html-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;第一次上传&quot;</span></span>
-<span id="cb16-4"><a href="html-basics.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 上一行代码是给这次上传添加备注。一个 git 项目可能我们要上传好多次，每次上传不同的内容。</span></span>
-<span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 备注可以让我们在之后很方便地看到每次上传的内容是什么。</span></span></code></pre></div>
-<p>这个代码块你直接复制粘贴就行。<code>#</code> 的部分会被终端自动识别为备注文本，因此不用担心。</p>
 <p>现在，请拿出刚才你复制的类似 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 的网址链接，我们接下来要用到。如果你的仓库名也是 <code>wangdachui</code> 的话，那么 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 这个链接中你只需要把我的 GitHub 用户名 <code>hongtaoh</code> 换成你的就行。</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="html-basics.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/hongtaoh/wangdachui.git</span>
-<span id="cb17-2"><a href="html-basics.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
-<span id="cb17-3"><a href="html-basics.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
-<p>上面两行代码复制粘贴到你的终端，运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
+<p>随后，不管你的电脑是什么系统，请在你的终端中输入：</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="html-basics.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb16-2"><a href="html-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb16-3"><a href="html-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;my first commit.&quot;</span></span>
+<span id="cb16-4"><a href="html-basics.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/hongtaoh/wangdachui.git</span>
+<span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
+<span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
+<p>这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。</p>
+<p>上面几行代码需要注意的是：
+1. <code>git init</code> 是创建一个 git 项目。<code>init</code> 应该是 initiate 的缩写。
+2. <code>git add .</code>: 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。这行代码是告诉 git，刚才新加的全部内容都要上传
+3. <code>git commit -m "my first commit."</code> 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。
+4. <strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p>
+<p>上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
 <div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
 <img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
 <p class="caption">
