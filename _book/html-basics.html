@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-20" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,11 +238,14 @@ Figure 3.3: 新建仓库 URL
 <span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
 <span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
 <p>这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。</p>
-<p>上面几行代码需要注意的是：
-1. <code>git init</code> 是创建一个 git 项目。<code>init</code> 应该是 initiate 的缩写。
-2. <code>git add .</code>: 最后的那个点请不要忘记。那个点和 add 之间的空格也不要落下。这行代码是告诉 git，刚才新加的全部内容都要上传
-3. <code>git commit -m "my first commit."</code> 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。
-4. <strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p>
+<p>上面几行代码需要注意的是：</p>
+<ol style="list-style-type: decimal">
+<li><p><code>git init</code> 是创建一个 git 项目。<code>init</code> 应该是 initiate 的缩写。</p></li>
+<li><p><code>git add .</code>: 最后的那个点请不要忘记。那个点和 add
+之间的空格也不要落下。这行代码是告诉 git，刚才新加的全部内容都要上传。</p></li>
+<li><p><code>git commit -m "my first commit."</code> 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。</p></li>
+<li><p><strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p></li>
+</ol>
 <p>上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
 <div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
 <img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
