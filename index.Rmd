@@ -8,7 +8,8 @@ documentclass: book
 biblio-style: apalike
 link-citations: yes
 github-repo: hongtaoh/intro2code
-description: "This is Hongtao Hao's notes on Scott Murray's D3 Book"
+description: "编程入门"
 ---
+# 这本书是干什么的{-}
 
 这本电子书旨在帮助没有任何编程基础的人了解几个比较关键的问题：什么是编程、编程能用来干什么、编程都需要用到那些工具、都有哪些主要的编程语言、这些语言能干什么、这些语言怎么学和怎么用。

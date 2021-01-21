@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 3 章 HTML 基本知识 | 实用编程入门指南</title>
+  <title>实用编程入门指南</title>
   <meta name="description" content="编程入门" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 3 章 HTML 基本知识 | 实用编程入门指南" />
+  <meta property="og:title" content="实用编程入门指南" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="hongtaoh/intro2code" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 3 章 HTML 基本知识 | 实用编程入门指南" />
+  <meta name="twitter:title" content="实用编程入门指南" />
   
   <meta name="twitter:description" content="编程入门" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="markdown.html"/>
 
+<link rel="next" href="prep.html"/>
 <script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -190,108 +190,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="html-basics" class="section level1" number="3">
-<h1><span class="header-section-number">第 3 章</span> HTML 基本知识</h1>
-<p>如果使用 Typora 完成的之前布置的Markdown 的作业，答案请参考<a href="static/files/wangdachui.md">这里</a>。请检查下是否和你的答案一致。</p>
-<p>用 Typora 打开这份 Markdown 文档后，选择 文件 (File) <span class="math inline">\(\to\)</span> 导出 (Export) <span class="math inline">\(\to\)</span> HTML (without styles). 导出后的 <code>HTML</code> 文档应该是<a href="static/files/wangdachui.html">这样</a>。</p>
-<p>用浏览器打开这份 HTML 文档，你可以看到和你在 <a href="markdown.html#md-exercise">2.3 Markdown 练习中</a> 看到的结果一致。你现在看到的就是一个最基本的网页了。</p>
-<div id="deploy-html" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> 网页部署</h2>
-<p>在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。</p>
-<p>第一步，在你的电脑上创建一个文件夹，将其命名为 wangdachui。然后把刚才导出的 HTML 文件重新命名为 <code>index.html</code> 并放到 wangdachui 这个文件夹。</p>
-<p>第二步，请确保你已经有了一个 <a href="https://github.com/">GitHub</a> 账号。登陆之后，在屏幕右上角你的 GitHub 头像左侧有一个 <span class="math inline">\(+\)</span> 的标志。点击它，然后选择 New repository。在出现的页面中，在 Repository name 那里填上 wangdachui 或者任何你觉得合适的名字。其它都不要动，然后点击 Create repository。在随后出现的页面中，在 “Quick setup — if you’ve done this kind of thing before” 下面那一行，HTTP/SSH 后面有个网址，应该是 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 这样的形式。把这个网址复制下来。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo"></span>
-<img src="https://hongtaoh.com/media/netlify/deploy-1.png" alt="登陆 GitHub 之后，选择 New repository" width="50%" />
-<p class="caption">
-Figure 3.1: 登陆 GitHub 之后，选择 New repository
-</p>
+<div id="header">
+<h1 class="title">实用编程入门指南</h1>
+<p class="author"><em>郝鸿涛</em></p>
+<p class="date"><em>2021-01-21</em></p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-new"></span>
-<img src="static/img/new-repo-name.png" alt="新建仓库设置" width="80%" />
-<p class="caption">
-Figure 3.2: 新建仓库设置
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-url"></span>
-<img src="static/img/new-repo-url.png" alt="新建仓库 URL" width="100%" />
-<p class="caption">
-Figure 3.3: 新建仓库 URL
-</p>
-</div>
-<p>第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看<a href="https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87">这里</a>。使用Windows 系统的同学，打开你选择的<a href="prep.html#terminal">终端工具</a>。</p>
-<p>打开终端之后：</p>
-<ul>
-<li><p>如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 <code>git config --global user.name "你的git用户名"</code>, 以及 <code>git config --global user.email "你的邮箱"</code>。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a> 或 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a>。</p></li>
-<li><p>使用苹果电脑的同学，我建议你把 <code>wangdachui</code> 这个文件夹拖到桌面上，然后在 Terminal 中输入：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="html-basics.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Desktop/wangdachui</span></code></pre></div></li>
-<li><p>使用 Windowns 系统的同学，如果你选择使用 PowerShell, 请先阅读 <a href="https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A%3A-%E5%9C%A8%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Git-Git-%E5%9C%A8-PowerShell-%E4%B8%AD%E4%BD%BF%E7%94%A8-Git">这里</a>。PowerShell 配备了 Git 之后，终端才能执行以下的代码。</p></li>
-<li><p>使用 Windowns 系统的同学，打开了 <a href="https://cmder.net/">Cmder</a> 或其它终端后，加入你把 <code>wangdachui</code> 这个文件夹在你的 <code>H</code> 盘，那么，请在 <a href="https://cmder.net/">Cmder</a> 或其它终端中输入：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:\wangdachui</span></code></pre></div></li>
-</ul>
-<p>如果你不确定路径是什么，输完 <code>cd</code> 之后，按一下空格，然后直接把 <code>wangdachui</code> 这个文件夹拖到终端中，路径会自动显示出来。</p>
-<p><code>cd</code> 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。</p>
-<p>现在，请拿出刚才你复制的类似 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 的网址链接，我们接下来要用到。如果你的仓库名也是 <code>wangdachui</code> 的话，那么 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 这个链接中你只需要把我的 GitHub 用户名 <code>hongtaoh</code> 换成你的就行。</p>
-<p>随后，不管你的电脑是什么系统，请在你的终端中输入：</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="html-basics.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb16-2"><a href="html-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb16-3"><a href="html-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;my first commit.&quot;</span></span>
-<span id="cb16-4"><a href="html-basics.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/hongtaoh/wangdachui.git</span>
-<span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
-<span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
-<p>这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。</p>
-<p>上面几行代码需要注意的是：</p>
-<ol style="list-style-type: decimal">
-<li><p><code>git init</code> 是创建一个 git 项目。<code>init</code> 应该是 initiate 的缩写。</p></li>
-<li><p><code>git add .</code>: 最后的那个点请不要忘记。那个点和 add
-之间的空格也不要落下。这行代码是告诉 git，刚才新加的全部内容都要上传。</p></li>
-<li><p><code>git commit -m "my first commit."</code> 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。</p></li>
-<li><p><strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p></li>
-</ol>
-<p>上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
-<img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
-<p class="caption">
-Figure 3.4: index.html 上传成功的页面
-</p>
-</div>
-<p>现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 “Your site is ready to be published at <a href="http://你的用户名.github.io/wangdachui/" class="uri">http://你的用户名.github.io/wangdachui/</a>”。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 “Your site is published at …” 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，这个网页别人也能看到了。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-gh-pages-01"></span>
-<img src="static/img/gh-pages-01.png" alt="点击 None, 选择 master" width="90%" />
-<p class="caption">
-Figure 3.5: 点击 None, 选择 master
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-gh-pages-02"></span>
-<img src="static/img/gh-pages-02.png" alt="部署成功后的页面" width="100%" />
-<p class="caption">
-Figure 3.6: 部署成功后的页面
-</p>
-</div>
-</div>
-<div id="gh-pages-updating" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> 内容更新</h2>
+<div id="这本书是干什么的" class="section level1 unnumbered">
+<h1>这本书是干什么的</h1>
+<p>这本电子书旨在帮助没有任何编程基础的人了解几个比较关键的问题：什么是编程、编程能用来干什么、编程都需要用到那些工具、都有哪些主要的编程语言、这些语言能干什么、这些语言怎么学和怎么用。</p>
 
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="markdown.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
+<a href="prep.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -322,7 +237,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/hongtaoh/intro2code/edit/master/03-html.Rmd",
+"link": "https://github.com/hongtaoh/intro2code/edit/master/index.Rmd",
 "text": "编辑"
 },
 "history": {
