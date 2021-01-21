@@ -30,5 +30,5 @@ md-exercise
 作品简介
 常用语
 html-basics
-html-in-practice
+deploy-html
 gh-pages-updating

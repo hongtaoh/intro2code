@@ -6,7 +6,7 @@
 
 用浏览器打开这份 HTML 文档，你可以看到和你在 [2.3 Markdown 练习中](markdown.html#md-exercise) 看到的结果一致。你现在看到的就是一个最基本的网页了。
 
-## 做货真价实的网页{#html-in-practice}
+## 网页部署{#deploy-html}
 
 在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。
 

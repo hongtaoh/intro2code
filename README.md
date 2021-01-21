@@ -1,1 +1,1 @@
-编程小白实用入门指南: <https://intro2code.netlify.app/>
+实用编程入门指南: <https://intro2code.netlify.app/>
