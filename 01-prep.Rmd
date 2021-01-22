@@ -10,7 +10,9 @@
 
 ## 文本编辑器{#text-editor}
 
-文本编辑器 (Text Editor) 是程序员用来吃饭的家伙。每个人的喜好不同，[Sublime Text](https://www.sublimetext.com/), [VS Code](https://code.visualstudio.com/) 和 [vim](https://www.vim.org/download.php) 这三个貌似很多人用，而且也都是免费的。我比较习惯用 Sublime Text。
+文本编辑器 (Text Editor) 是程序员用来吃饭的家伙。每个人的喜好不同，[Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/) , [VS Code](https://code.visualstudio.com/) 和 [vim](https://www.vim.org/download.php) 这四个貌似很多人用，而且都是免费的。我个人比较习惯用 Sublime Text。
+
+请随便挑一个，然后下载下来，我们之后会用到。
 
 ## 英语{#English}
 

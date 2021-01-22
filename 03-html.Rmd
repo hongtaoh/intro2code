@@ -6,6 +6,18 @@
 
 用浏览器打开这份 HTML 文档，你可以看到和你在 [2.3 Markdown 练习中](markdown.html#md-exercise) 看到的结果一致。你现在看到的就是一个最基本的网页了。
 
+## Windows 系统安装 Git
+
+我们接下来要用到 Git。苹果电脑已经预装了 Git, 所以不需要提前准备。使用Windows 系统的同学，需要先安装 Git。
+
+首先，按照[这个步骤](https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html)看一下你的电脑系统类型是32位还是64位。然后点击[这里](https://git-scm.com/download/win)，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 [32 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe) 或者 [64 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe)。
+
+下载好之后的 Git 安装过程请参考 [这里](https://www.cnblogs.com/xueweisuoyong/p/11914045.html)。需要注意的是，上面这个教程是根据 Git 2.24.02 做的，如果你刚才下载的 Git 版本号和这个不一样，具体的步骤可能有一些差异。比如，2021年1月14号更新的 Git 2.30.0.2 版本，在安装时，第 7 步 是上面那个教程的第 6 步，而新版本的第 6 步是 Adjusting the name of the initial branch in new repositories, 你直接选择默认的 Let Git decide 就好。同样，新版本安装时让你 Choose the default behavior of `git pull` 时，你也选择默认的 Default (fast-foward or merge) 就好。
+
+总之一句话，参考上面的教程，安装过程中如果有和教程中提到的步骤不一样的情况，直接选择默认的选项。
+
+Git 安装好之后，就可以打开 Git Bash 了。我们接下来要用到。
+
 ## 网页部署{#deploy-html}
 
 在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。
@@ -26,7 +38,7 @@ knitr::include_graphics('static/img/new-repo-name.png')
 knitr::include_graphics('static/img/new-repo-url.png')
 ```
 
-第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看[这里](https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87)。使用Windows 系统的同学，打开你选择的[终端工具](prep.html#terminal)。
+第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看[这里](https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87)。使用 Windows 系统的同学，请打开 Git Bash。
 
 打开终端之后：
 
@@ -38,9 +50,7 @@ knitr::include_graphics('static/img/new-repo-url.png')
    cd Desktop/wangdachui
    ```
 
-- 使用 Windowns 系统的同学，如果你选择使用 PowerShell, 请先阅读 [这里](https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A%3A-%E5%9C%A8%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Git-Git-%E5%9C%A8-PowerShell-%E4%B8%AD%E4%BD%BF%E7%94%A8-Git)。PowerShell 配备了 Git 之后，终端才能执行以下的代码。
-
-- 使用 Windowns 系统的同学，打开了 [Cmder](https://cmder.net/) 或其它终端后，加入你把 `wangdachui` 这个文件夹在你的 `H` 盘，那么，请在 [Cmder](https://cmder.net/) 或其它终端中输入：
+- 使用 Windowns 系统的同学，在 Git Bash 中输入：
 
    ```{bash eval=FALSE}
    cd H:\wangdachui
@@ -63,7 +73,7 @@ git remote add origin https://github.com/hongtaoh/wangdachui.git
 git push -u origin master
 ```
 
-这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。
+这个代码块你直接复制粘贴就行。粘贴完之后，按一下回车键。
 
 上面几行代码需要注意的是：
 
@@ -76,13 +86,15 @@ git push -u origin master
 
 4. **第四行代码一定要替换为你自己的链接！！！！！！**
 
-上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
+使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize GitCredentialManager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for 'https://github.com':)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。
+
+上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
 
 ```{r new-repo-index, echo=FALSE, fig.cap="index.html 上传成功的页面", fig.align='center', out.width = "100%"}
 knitr::include_graphics('static/img/new-repo-index.png')
 ```
 
-现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 "Your site is ready to be published at http://你的用户名.github.io/wangdachui/"。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 "Your site is published at ..." 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，这个网页别人也能看到了。
+现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 "Your site is ready to be published at http://你的用户名.github.io/wangdachui/"。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 "Your site is published at ..." 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，任何知道你这个网址的人都可以打开这个网页。
 
 ```{r new-repo-gh-pages-01, echo=FALSE, fig.cap="点击 None, 选择 master", fig.align='center', out.width = "90%"}
 knitr::include_graphics('static/img/gh-pages-01.png')

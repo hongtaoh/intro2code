@@ -30,5 +30,6 @@ md-exercise
 作品简介
 常用语
 html-basics
+windows-系统安装-git
 deploy-html
 gh-pages-updating

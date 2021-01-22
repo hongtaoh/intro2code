@@ -4,7 +4,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Introduction to coding</a></li>
+        <li><a href="./">编程入门</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">本网页由 Bookdown 强力驱动</a></li>
     edit: https://github.com/hongtaoh/intro2code/edit/master/%s

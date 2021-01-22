@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-21" />
+<meta name="date" content="2021-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,10 +132,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Introduction to coding</a></li>
+<li><a href="./">编程入门</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>这本书是干什么的</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
 <li class="chapter" data-level="1" data-path="prep.html"><a href="prep.html"><i class="fa fa-check"></i><b>1</b> 前期准备</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="prep.html"><a href="prep.html#github"><i class="fa fa-check"></i><b>1.1</b> GitHub</a></li>
@@ -167,8 +167,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="html-basics.html"><a href="html-basics.html"><i class="fa fa-check"></i><b>3</b> HTML 基本知识</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.1</b> 网页部署</a></li>
-<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#gh-pages-updating"><i class="fa fa-check"></i><b>3.2</b> 内容更新</a></li>
+<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.1</b> Windows 系统安装 Git</a></li>
+<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.2</b> 网页部署</a></li>
+<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#gh-pages-updating"><i class="fa fa-check"></i><b>3.3</b> 内容更新</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">本网页由 Bookdown 强力驱动</a></li>
@@ -195,8 +196,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>如果使用 Typora 完成的之前布置的Markdown 的作业，答案请参考<a href="static/files/wangdachui.md">这里</a>。请检查下是否和你的答案一致。</p>
 <p>用 Typora 打开这份 Markdown 文档后，选择 文件 (File) <span class="math inline">\(\to\)</span> 导出 (Export) <span class="math inline">\(\to\)</span> HTML (without styles). 导出后的 <code>HTML</code> 文档应该是<a href="static/files/wangdachui.html">这样</a>。</p>
 <p>用浏览器打开这份 HTML 文档，你可以看到和你在 <a href="markdown.html#md-exercise">2.3 Markdown 练习中</a> 看到的结果一致。你现在看到的就是一个最基本的网页了。</p>
-<div id="deploy-html" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> 网页部署</h2>
+<div id="windows-系统安装-git" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Windows 系统安装 Git</h2>
+<p>我们接下来要用到 Git。苹果电脑已经预装了 Git, 所以不需要提前准备。使用Windows 系统的同学，需要先安装 Git。</p>
+<p>首先，按照<a href="https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html">这个步骤</a>看一下你的电脑系统类型是32位还是64位。然后点击<a href="https://git-scm.com/download/win">这里</a>，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe">32 位</a> 或者 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe">64 位</a>。</p>
+<p>下载好之后的 Git 安装过程请参考 <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">这里</a>。需要注意的是，上面这个教程是根据 Git 2.24.02 做的，如果你刚才下载的 Git 版本号和这个不一样，具体的步骤可能有一些差异。比如，2021年1月14号更新的 Git 2.30.0.2 版本，在安装时，第 7 步 是上面那个教程的第 6 步，而新版本的第 6 步是 Adjusting the name of the initial branch in new repositories, 你直接选择默认的 Let Git decide 就好。同样，新版本安装时让你 Choose the default behavior of <code>git pull</code> 时，你也选择默认的 Default (fast-foward or merge) 就好。</p>
+<p>总之一句话，参考上面的教程，安装过程中如果有和教程中提到的步骤不一样的情况，直接选择默认的选项。</p>
+<p>Git 安装好之后，就可以打开 Git Bash 了。我们接下来要用到。</p>
+</div>
+<div id="deploy-html" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 网页部署</h2>
 <p>在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。</p>
 <p>第一步，在你的电脑上创建一个文件夹，将其命名为 wangdachui。然后把刚才导出的 HTML 文件重新命名为 <code>index.html</code> 并放到 wangdachui 这个文件夹。</p>
 <p>第二步，请确保你已经有了一个 <a href="https://github.com/">GitHub</a> 账号。登陆之后，在屏幕右上角你的 GitHub 头像左侧有一个 <span class="math inline">\(+\)</span> 的标志。点击它，然后选择 New repository。在出现的页面中，在 Repository name 那里填上 wangdachui 或者任何你觉得合适的名字。其它都不要动，然后点击 Create repository。在随后出现的页面中，在 “Quick setup — if you’ve done this kind of thing before” 下面那一行，HTTP/SSH 后面有个网址，应该是 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 这样的形式。把这个网址复制下来。</p>
@@ -218,14 +227,13 @@ Figure 3.2: 新建仓库设置
 Figure 3.3: 新建仓库 URL
 </p>
 </div>
-<p>第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看<a href="https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87">这里</a>。使用Windows 系统的同学，打开你选择的<a href="prep.html#terminal">终端工具</a>。</p>
+<p>第三步，打开你电脑上的终端。苹果电脑请打开 Terminal, 如果你连 Terminal 怎么打开都不知道，请看<a href="https://hongtaoh.com/cn/2020/01/04/hugo-netlify-deploy/#%E4%B8%89terminal-%E5%8F%8A-git-%E7%9F%A5%E8%AF%86%E9%A2%84%E5%A4%87">这里</a>。使用 Windows 系统的同学，请打开 Git Bash。</p>
 <p>打开终端之后：</p>
 <ul>
 <li><p>如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 <code>git config --global user.name "你的git用户名"</code>, 以及 <code>git config --global user.email "你的邮箱"</code>。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a> 或 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE">这里</a>。</p></li>
 <li><p>使用苹果电脑的同学，我建议你把 <code>wangdachui</code> 这个文件夹拖到桌面上，然后在 Terminal 中输入：</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="html-basics.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Desktop/wangdachui</span></code></pre></div></li>
-<li><p>使用 Windowns 系统的同学，如果你选择使用 PowerShell, 请先阅读 <a href="https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A%3A-%E5%9C%A8%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Git-Git-%E5%9C%A8-PowerShell-%E4%B8%AD%E4%BD%BF%E7%94%A8-Git">这里</a>。PowerShell 配备了 Git 之后，终端才能执行以下的代码。</p></li>
-<li><p>使用 Windowns 系统的同学，打开了 <a href="https://cmder.net/">Cmder</a> 或其它终端后，加入你把 <code>wangdachui</code> 这个文件夹在你的 <code>H</code> 盘，那么，请在 <a href="https://cmder.net/">Cmder</a> 或其它终端中输入：</p>
+<li><p>使用 Windowns 系统的同学，在 Git Bash 中输入：</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:\wangdachui</span></code></pre></div></li>
 </ul>
 <p>如果你不确定路径是什么，输完 <code>cd</code> 之后，按一下空格，然后直接把 <code>wangdachui</code> 这个文件夹拖到终端中，路径会自动显示出来。</p>
@@ -238,7 +246,7 @@ Figure 3.3: 新建仓库 URL
 <span id="cb16-4"><a href="html-basics.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/hongtaoh/wangdachui.git</span>
 <span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
 <span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
-<p>这个代码块你直接复制粘贴就行。粘贴完之后，别忘记按一下回车键。</p>
+<p>这个代码块你直接复制粘贴就行。粘贴完之后，按一下回车键。</p>
 <p>上面几行代码需要注意的是：</p>
 <ol style="list-style-type: decimal">
 <li><p><code>git init</code> 是创建一个 git 项目。<code>init</code> 应该是 initiate 的缩写。</p></li>
@@ -247,14 +255,15 @@ Figure 3.3: 新建仓库 URL
 <li><p><code>git commit -m "my first commit."</code> 是为这次上传添加备注。一个 git 项目我们可能要上传很多次，每次上传不同的内容。给每次上传添加备注可以让我们之后了解每次上传的内容是什么。</p></li>
 <li><p><strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p></li>
 </ol>
-<p>上面的代码运行结束后，刷新你的 GitHub 页面，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
+<p>使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize GitCredentialManager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for ‘<a href="https://github.com" class="uri">https://github.com</a>’:)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。</p>
+<p>上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
 <div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
 <img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
 <p class="caption">
 Figure 3.4: index.html 上传成功的页面
 </p>
 </div>
-<p>现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 “Your site is ready to be published at <a href="http://你的用户名.github.io/wangdachui/" class="uri">http://你的用户名.github.io/wangdachui/</a>”。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 “Your site is published at …” 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，这个网页别人也能看到了。</p>
+<p>现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 “Your site is ready to be published at <a href="http://你的用户名.github.io/wangdachui/" class="uri">http://你的用户名.github.io/wangdachui/</a>”。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 “Your site is published at …” 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，任何知道你这个网址的人都可以打开这个网页。</p>
 <div class="figure" style="text-align: center"><span id="fig:new-repo-gh-pages-01"></span>
 <img src="static/img/gh-pages-01.png" alt="点击 None, 选择 master" width="90%" />
 <p class="caption">
@@ -268,8 +277,8 @@ Figure 3.6: 部署成功后的页面
 </p>
 </div>
 </div>
-<div id="gh-pages-updating" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> 内容更新</h2>
+<div id="gh-pages-updating" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 内容更新</h2>
 
 </div>
 </div>
