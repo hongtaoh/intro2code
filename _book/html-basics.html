@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-22" />
+<meta name="date" content="2021-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,7 +119,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="static/css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -169,7 +169,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.1</b> Windows 系统安装 Git</a></li>
 <li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.2</b> 网页部署</a></li>
-<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#gh-pages-updating"><i class="fa fa-check"></i><b>3.3</b> 内容更新</a></li>
+<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.3</b> 更新内容</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.3.1</b> 经常更新怎么办</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">本网页由 Bookdown 强力驱动</a></li>
@@ -256,7 +259,7 @@ Figure 3.3: 新建仓库 URL
 <li><p><strong>第四行代码一定要替换为你自己的链接！！！！！！</strong></p></li>
 </ol>
 <p>使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize GitCredentialManager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for ‘<a href="https://github.com" class="uri">https://github.com</a>’:)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。</p>
-<p>上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的化，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
+<p>上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的话，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
 <div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
 <img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
 <p class="caption">
@@ -277,9 +280,37 @@ Figure 3.6: 部署成功后的页面
 </p>
 </div>
 </div>
-<div id="gh-pages-updating" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> 内容更新</h2>
+<div id="content-update" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 更新内容</h2>
+<p>一个现实的问题是，假如 <code>wangdachui</code> 这个仓库放的是你的个人网站，那么你需要经常更新内容。内容更新之后如何上传这些变动？这是这一节我们要讲的问题。</p>
+<p>首先，回到你电脑上 <code>wangdachui</code> 文件夹里的 <code>index.html</code>这个文件。右键 <span class="math inline">\(\to\)</span> 打开方式，然后用你之前选择并下载好的<a href="prep.html#text-editor">文本编辑器</a>打开 <code>index.html</code> 这个文件。需要注意的是要用文本编辑器打开，而不是默认的浏览器打开，因为我们接下来要编辑这个文档。</p>
+<p>打开之后，把 <code>王大锤简历</code> 改成 <code>王大锤的简历</code>，然后点击 <code>ctrl</code> + <code>s</code> （苹果电脑是 <code>command</code> + <code>s</code>) 保存。</p>
+<p>保存之后，直接打开 <code>index.html</code>，在浏览器中你能看到内容已经有变更。现在，我们如何把这个改动后的文档上传到 GitHub?</p>
+<p>打开终端 (Git Bash 或者 Terminal)，首先用把路径改到 <code>wangdachui</code> 这个文件夹。我们上面讲过，需要用到 <code>cd</code>。路径改好后，回忆一下我们之前是怎么把最初的文件上传到 GitHub 的。</p>
+<p>我们首先是用了 <code>git init</code>。这一行的命令是在创建一个新的 git 项目。我们已经创建了，所以不需要再输它。</p>
+<p><code>git add .</code> 我们在更新内容时依旧需要。为什呢？<code>git add .</code> 的意思是「添加刚才新加入的全部内容」。我们第一次用 <code>git add .</code> 时，新加的内容是整个 <code>index.html</code>，所以它被上传。这次我们新加的内容是一个「的」字。</p>
+<p>假设在你的 <code>wangdachui</code> 文件夹中除了 <code>index.html</code> 还有一个 <code>README.md</code>，你对两个文件都做了更新，但是你只想上传 <code>README.md</code> 的更新，<code>index.html</code> 暂时不更新，该怎么办呢？只需要把 <code>git add .</code> 替换成 <code>git add README.md</code> 就可以了。</p>
+<p>我们接着看，<code>git commit -m "your messsage here"</code> 也是需要的。这行代码是给我们这次的内容更新做记录，所以依旧需要。</p>
+<p>再来，<code>git remote add origin ...</code> 就不需要了。为什么呢？因为这行代码的目的是给我们的本地文件夹创建一个远程的 git 项目。我们刚才已经创建了，所以这次不需要再创建。</p>
 
+<div class="rmdnote">
+所谓「远程 git 项目」在这里就是指你 GitHub 上的那个 wangdachui 仓库。
+</div>
+<p>最后，<code>git push -u origin master</code> 这一行代码的目的是把我们刚才的变动上传到我们创立的远程仓库中的 master 分支 (branch)。<code>origin</code> 在这里指的就是我们那个远程仓库。不过，这里需要注意的是，<code>git push -u origin master</code> 一般是<a href="https://github.com/git-guides/git-push">第一次上传的时候用</a>，之后只用 <code>git push origin master</code> 就可以。想了解具体情况，请看<a href="https://stackoverflow.com/questions/5697750/what-exactly-does-the-u-do-git-push-u-origin-master-vs-git-push-origin-ma">这个帖子</a>。</p>
+<p>总结一下，我们需要用：</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="html-basics.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb17-2"><a href="html-basics.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;更新内容&quot;</span></span>
+<span id="cb17-3"><a href="html-basics.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin master</span></code></pre></div>
+<div id="updating-often" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 经常更新怎么办</h3>
+<p>如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？</p>
+<p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。</p>
+<p>每次我们更新完内容后，在用 <code>cd</code> 改变路径到 <code>wangdachui</code> 这个文件夹之后，只需要在终端中输入 <code>bash deploy.sh</code> 就好。</p>
+<p>有个问题是，<code>git commit -m "更新内容"</code> 最好可以换成</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="html-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st">&quot;</span></span></code></pre></div>
+<p>这样我们之后就知道每次更新是在什么时间进行的。</p>
+
+</div>
 </div>
 </div>
 

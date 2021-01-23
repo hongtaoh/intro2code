@@ -88,7 +88,7 @@ git push -u origin master
 
 使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize GitCredentialManager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for 'https://github.com':)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。
 
-上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的化，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
+上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的话，你会看到 `index.html` 已经躺在你刚创建的仓库里了。
 
 ```{r new-repo-index, echo=FALSE, fig.cap="index.html 上传成功的页面", fig.align='center', out.width = "100%"}
 knitr::include_graphics('static/img/new-repo-index.png')
@@ -104,4 +104,54 @@ knitr::include_graphics('static/img/gh-pages-01.png')
 knitr::include_graphics('static/img/gh-pages-02.png')
 ```
 
-## 内容更新{#gh-pages-updating}
+## 更新内容{#content-update}
+
+一个现实的问题是，假如 `wangdachui` 这个仓库放的是你的个人网站，那么你需要经常更新内容。内容更新之后如何上传这些变动？这是这一节我们要讲的问题。
+
+首先，回到你电脑上 `wangdachui` 文件夹里的 `index.html`这个文件。右键 $\to$ 打开方式，然后用你之前选择并下载好的[文本编辑器](prep.html#text-editor)打开 `index.html` 这个文件。需要注意的是要用文本编辑器打开，而不是默认的浏览器打开，因为我们接下来要编辑这个文档。
+
+打开之后，把 `王大锤简历` 改成 `王大锤的简历`，然后点击 `ctrl` + `s` （苹果电脑是 `command` + `s`) 保存。
+
+保存之后，直接打开 `index.html`，在浏览器中你能看到内容已经有变更。现在，我们如何把这个改动后的文档上传到 GitHub?
+
+打开终端 (Git Bash 或者 Terminal)，首先用把路径改到 `wangdachui` 这个文件夹。我们上面讲过，需要用到 `cd`。路径改好后，回忆一下我们之前是怎么把最初的文件上传到 GitHub 的。
+
+我们首先是用了 `git init`。这一行的命令是在创建一个新的 git 项目。我们已经创建了，所以不需要再输它。
+
+`git add .` 我们在更新内容时依旧需要。为什呢？`git add .` 的意思是「添加刚才新加入的全部内容」。我们第一次用 `git add .` 时，新加的内容是整个 `index.html`，所以它被上传。这次我们新加的内容是一个「的」字。
+
+假设在你的 `wangdachui` 文件夹中除了 `index.html` 还有一个 `README.md`，你对两个文件都做了更新，但是你只想上传 `README.md` 的更新，`index.html` 暂时不更新，该怎么办呢？只需要把 `git add .` 替换成 `git add README.md` 就可以了。
+
+我们接着看，`git commit -m "your messsage here"` 也是需要的。这行代码是给我们这次的内容更新做记录，所以依旧需要。
+
+再来，`git remote add origin ...` 就不需要了。为什么呢？因为这行代码的目的是给我们的本地文件夹创建一个远程的 git 项目。我们刚才已经创建了，所以这次不需要再创建。
+
+```{block2 type="rmdnote"}
+所谓「远程 git 项目」在这里就是指你 GitHub 上的那个 wangdachui 仓库。
+```
+
+最后，`git push -u origin master` 这一行代码的目的是把我们刚才的变动上传到我们创立的远程仓库中的 master 分支 (branch)。`origin` 在这里指的就是我们那个远程仓库。不过，这里需要注意的是，`git push -u origin master` 一般是[第一次上传的时候用](https://github.com/git-guides/git-push)，之后只用 `git push origin master` 就可以。想了解具体情况，请看[这个帖子](https://stackoverflow.com/questions/5697750/what-exactly-does-the-u-do-git-push-u-origin-master-vs-git-push-origin-ma)。
+
+总结一下，我们需要用：
+
+```{bash eval=FALSE}
+git add .
+git commit -m "更新内容"
+git push origin master
+```
+
+### 经常更新怎么办{#updating-often}
+
+如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？
+
+现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 `deploy.sh`。不一定非要用 `deploy` 这个名字，你换别的也行，不过最后的那个 `.sh` 后缀一定要用。
+
+每次我们更新完内容后，在用 `cd` 改变路径到 `wangdachui` 这个文件夹之后，只需要在终端中输入 `bash deploy.sh` 就好。
+
+有个问题是，`git commit -m "更新内容"` 最好可以换成 
+
+```{bash eval=FALSE}
+git commit -m "`date`"
+```
+
+这样我们之后就知道每次更新是在什么时间进行的。

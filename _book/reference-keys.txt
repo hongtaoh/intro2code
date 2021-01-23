@@ -32,4 +32,5 @@ md-exercise
 html-basics
 windows-系统安装-git
 deploy-html
-gh-pages-updating
+content-update
+updating-often
