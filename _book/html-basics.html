@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-23" />
+<meta name="date" content="2021-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -304,10 +304,11 @@ Figure 3.6: 部署成功后的页面
 <div id="updating-often" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> 经常更新怎么办</h3>
 <p>如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？</p>
-<p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。</p>
-<p>每次我们更新完内容后，在用 <code>cd</code> 改变路径到 <code>wangdachui</code> 这个文件夹之后，只需要在终端中输入 <code>bash deploy.sh</code> 就好。</p>
+<p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。保存完之后，把 <code>deploy.sh</code> 这个文件放到 <code>wangdachui</code> 这个文件夹。</p>
+<p>每次我们更新完内容后，在用 <code>cd</code> 改变路径到 <code>wangdachui</code> 这个文件夹之后，只需要在终端中输入</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="html-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> deploy.sh</span></code></pre></div>
 <p>有个问题是，<code>git commit -m "更新内容"</code> 最好可以换成</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="html-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="html-basics.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st">&quot;</span></span></code></pre></div>
 <p>这样我们之后就知道每次更新是在什么时间进行的。</p>
 
 </div>

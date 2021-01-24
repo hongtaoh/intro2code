@@ -144,9 +144,14 @@ git push origin master
 
 如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？
 
-现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 `deploy.sh`。不一定非要用 `deploy` 这个名字，你换别的也行，不过最后的那个 `.sh` 后缀一定要用。
+现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 `deploy.sh`。不一定非要用 `deploy` 这个名字，你换别的也行，不过最后的那个 `.sh` 后缀一定要用。保存完之后，把 `deploy.sh` 这个文件放到 `wangdachui` 这个文件夹。
 
-每次我们更新完内容后，在用 `cd` 改变路径到 `wangdachui` 这个文件夹之后，只需要在终端中输入 `bash deploy.sh` 就好。
+每次我们更新完内容后，在用 `cd` 改变路径到 `wangdachui` 这个文件夹之后，只需要在终端中输入 
+
+```{bash eval=FALSE}
+bash deploy.sh
+``` 
+
 
 有个问题是，`git commit -m "更新内容"` 最好可以换成 
 
