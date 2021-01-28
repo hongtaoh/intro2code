@@ -144,7 +144,7 @@ git push origin master
 
 如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？
 
-现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 `deploy.sh`。不一定非要用 `deploy` 这个名字，你换别的也行，不过最后的那个 `.sh` 后缀一定要用。保存完之后，把 `deploy.sh` 这个文件放到 `wangdachui` 这个文件夹。
+现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 `deploy.sh`。不一定非要用 `deploy` 这个名字，你换别的也行，不过最后的那个 `.sh` 后缀一定要用。保存完之后，把 `deploy.sh` 这个文件放到 `wangdachui` 这个文件夹之下。
 
 每次我们更新完内容后，在用 `cd` 改变路径到 `wangdachui` 这个文件夹之后，只需要在终端中输入 
 
@@ -156,7 +156,116 @@ bash deploy.sh
 有个问题是，`git commit -m "更新内容"` 最好可以换成 
 
 ```{bash eval=FALSE}
-git commit -m "`date`"
+git commit -m "$(date)"
 ```
 
 这样我们之后就知道每次更新是在什么时间进行的。
+
+## HTML{#html-intro}
+
+现在我们开始正式讲解 HTML 基本知识。
+
+首先，如果 [2.3 Markdown 练习](markdown.html#md-exercise) 你是在 [https://stackedit.io/app](https://stackedit.io/app#) 在线制作的，现在请用 Typora 重新做一遍。
+
+完成后再用 Typora 把这份 Markdown 文档导出为 **HTML (without styles)**。一定要选择「无格式」，因为我们接下来要学习导出的 HTML 内容，如果带格式的话太复杂，不利于我们初期学习。不会导出的同学，请看这一章[开头的讲解](html-basics.html)。
+
+导出成功后，首先用你选择的文本编辑器打开这份 `wangdachui.html`，然后再用浏览器打开它。
+
+```{block2, type="rmdnote"}
+以下我提到 `wangdachui.html` 时，除非特殊说明，都是指你用文本编辑器（而非浏览器）打开后看到的内容。
+```
+
+### 我们先来看「个人照片」之前的部分{#before-personal-photo}
+
+```{html eval=FALSE}
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>wangdachui</title>
+</head>
+<body>
+   <h1>王大锤简历 </h1>
+     <p>以上是一级标题，以下全都是二级标题。</p>
+     <p>免责声明：以下内容部分参考百度百科 <a href='https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4'>王大锤</a> 这一次词条解释。</p>
+   <h2>基本信息</h2>
+     <ul>
+       <li>
+         <p>身高：170</p>
+       </li>
+       <li>
+         <p>体重：60 <em>公斤</em>  <sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></p>
+       </li>
+       <li>
+         <p>性别：<strong>男</strong> <sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup></p>
+       </li>
+       <li>
+         <p>出生日期：<del>2000年0月0日</del></p>
+       </li>
+       <li>
+         <p>出演作品</p>
+         <ol start='' >
+            <li>《万万没想到》</li>
+            <li>《暴走大事件》</li>
+         </ol>
+       </li>
+     </ul>
+```
+
+
+```{block2, type='rmdreminder'}
+如何你打开后发现你的文档和上面的内容长得不一样，不用担心。对 HTML 而言，空格、空行都只是为了让人容易理解。在计算机眼里，上面的全部代码就算写成一行也无所谓。
+```
+
+上面的几行 HTML 代码被计算机解析的结果，就是你在浏览器里看到的「王大锤简历」往下、「个人照片」往上的部分。
+
+我们一个一个来看：
+
+- `<!doctype html>` 这行代码是[让浏览器知道这份文档是 HTML](https://www.w3schools.com/tags/tag_doctype.asp)。
+
+- `<html>` 的作用是把整个 HTML 文档的内容（除了 `<!doctype html>`）环绕起来。你在 `wangdachui.html` 的最底端能看到 `</html>`。`<html>` 和 `</html>` 之间的内容，就是 HTML 文档的内容。
+
+- `<head>` 里面放的是元数据。所谓元数据是指「关于数据的数据」。现阶段你只需要知道它里面可以包括 `<title>`标签，也就是标题。现在请看你的浏览器，如果你现在只打开了一个页面，请随便再打开一个网址。当你在两个页面之前切换的时，在你鼠标点击的位置就能看到 `<title>` 和 `</title>` 之间的内容。
+
+- `<body>` 和 `</body>` 之间的部分是我们用浏览器一份 HTML 文档后能看到的内容。
+
+- `h1`, `h2`, `h3`, ... 是不同级别的标题。 `h1` 是一级标题，`h2` 是二级标题，`h3` 是三级标题，依此类推。最小的标题是 `h6`。数字越小，级别越高，字号越大。
+
+- `p`：段落
+
+- `<a>`：超链接 
+
+- `ul`, `or`, `li`: 列表。`ul`(unordered list) 是无序列表，`or` (ordered list) 是带数字的那种有序列表。不管是有序列表，还是无序列表，列表中的每一项都需要用 `li` 来表示。
+
+- `em`：斜体。em 是 emphasize 的缩写。
+
+- `strong` 或者 `b`: 粗体。b 是 bold 的缩写。
+
+以上就是「个人照片」之前的部分中我们需要学到的东西。
+
+### 「个人照片」之后的部分{#after-personal-photo}
+
+- `img`：插入图片。`img` 标签有两个必需的属性：
+  
+   - `src`：source (来源) 的缩写，用于提示图片地址，可以直接插入网址，或者本地图片地址。
+   - `alt`： 图片说明。我们[之前讲过](markdown.html#image)，当图片无法显示，比如链接失效时，别人可以通过`alt` 里的内容来大体了解你这个图片是什么。还有一种情形是，专用浏览器可以通过读出 `alt` 里的内容来让盲人用户了解你的图片内容。
+ 
+除此之外，`img` 还可以通过 `height` 和 `width` 属性来改变图片的长度和宽度。
+
+需要注意的是，和上面所有的标签不同，`<img>` 不需要 `</img>` 来结尾。
+
+我们来举一个栗子🌰：
+
+```{html eval=FALSE}
+<img src="image/my_family.jpg" alt="A photo of my family in 2005" height="300" width="200">
+```
+  
+上面这行代码需要注意的是，属性之间不需要逗号来间隔。`height` 和 `width` 的默认单位是像素 (pixels)。
+
+说到 `<img>` 我们就不得不提到 `<figure>`。`<figure>` 和 `</figure>` 之间除了可以放[图片](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#images)，还能放[诗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#poems)，[代码块](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#code_snippets)等。只要你觉得一些内容可以当成一个图像来看待，你就可以将其放到`<figure>` 和 `</figure>` 之间。比如 `wangdachui.html` 就把作品简介之下的表格放在了 `<figure>` 和 `</figure>` 之间。
+
+有一点需要注意：即使把 `<figure>` 和 `</figure>` 去掉，浏览器显示的内容并不会有任何改变。
+
+
+
+

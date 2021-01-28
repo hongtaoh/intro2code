@@ -135,7 +135,7 @@ Markdown 相比 Word 有什么好处呢？第一，非常简单，5分钟就能�
 
 这是[一个链接](https://github.com/),
 
-### 插入图片
+### 插入图片{#image}
 
 ```{markdown}
 ![GitHub](https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png)

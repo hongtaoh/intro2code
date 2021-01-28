@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-24" />
+<meta name="date" content="2021-01-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -154,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.4</b> 表格</a></li>
 <li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.5</b> 引语</a></li>
 <li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.6</b> 链接</a></li>
-<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#插入图片"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
+<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#image"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
 <li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.8</b> 代码</a></li>
 <li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.9</b> 注释</a></li>
 <li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.10</b> HTML</a></li>
@@ -172,6 +172,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.3</b> 更新内容</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.3.1</b> 经常更新怎么办</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="html-basics.html"><a href="html-basics.html#html-intro"><i class="fa fa-check"></i><b>3.4</b> HTML</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="html-basics.html"><a href="html-basics.html#before-personal-photo"><i class="fa fa-check"></i><b>3.4.1</b> 我们先来看「个人照片」之前的部分</a></li>
+<li class="chapter" data-level="3.4.2" data-path="html-basics.html"><a href="html-basics.html#after-personal-photo"><i class="fa fa-check"></i><b>3.4.2</b> 「个人照片」之后的部分</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -304,12 +309,94 @@ Figure 3.6: 部署成功后的页面
 <div id="updating-often" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> 经常更新怎么办</h3>
 <p>如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？</p>
-<p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。保存完之后，把 <code>deploy.sh</code> 这个文件放到 <code>wangdachui</code> 这个文件夹。</p>
+<p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。保存完之后，把 <code>deploy.sh</code> 这个文件放到 <code>wangdachui</code> 这个文件夹之下。</p>
 <p>每次我们更新完内容后，在用 <code>cd</code> 改变路径到 <code>wangdachui</code> 这个文件夹之后，只需要在终端中输入</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="html-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> deploy.sh</span></code></pre></div>
 <p>有个问题是，<code>git commit -m "更新内容"</code> 最好可以换成</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="html-basics.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="kw">`</span><span class="fu">date</span><span class="kw">`</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="html-basics.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>这样我们之后就知道每次更新是在什么时间进行的。</p>
+</div>
+</div>
+<div id="html-intro" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> HTML</h2>
+<p>现在我们开始正式讲解 HTML 基本知识。</p>
+<p>首先，如果 <a href="markdown.html#md-exercise">2.3 Markdown 练习</a> 你是在 <a href="https://stackedit.io/app#">https://stackedit.io/app</a> 在线制作的，现在请用 Typora 重新做一遍。</p>
+<p>完成后再用 Typora 把这份 Markdown 文档导出为 <strong>HTML (without styles)</strong>。一定要选择「无格式」，因为我们接下来要学习导出的 HTML 内容，如果带格式的话太复杂，不利于我们初期学习。不会导出的同学，请看这一章<a href="html-basics.html">开头的讲解</a>。</p>
+<p>导出成功后，首先用你选择的文本编辑器打开这份 <code>wangdachui.html</code>，然后再用浏览器打开它。</p>
+
+<div class="rmdnote">
+以下我提到 <code>wangdachui.html</code> 时，除非特殊说明，都是指你用文本编辑器（而非浏览器）打开后看到的内容。
+</div>
+<div id="before-personal-photo" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> 我们先来看「个人照片」之前的部分</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="html-basics.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+<span id="cb20-2"><a href="html-basics.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb20-3"><a href="html-basics.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb20-4"><a href="html-basics.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&#39;UTF-8&#39;</span><span class="kw">&gt;&lt;meta</span><span class="ot"> name=</span><span class="st">&#39;viewport&#39;</span><span class="ot"> content=</span><span class="st">&#39;width=device-width initial-scale=1&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb20-5"><a href="html-basics.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>wangdachui<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb20-6"><a href="html-basics.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb20-7"><a href="html-basics.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb20-8"><a href="html-basics.html#cb20-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h1&gt;</span>王大锤简历 <span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb20-9"><a href="html-basics.html#cb20-9" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;p&gt;</span>以上是一级标题，以下全都是二级标题。<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-10"><a href="html-basics.html#cb20-10" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;p&gt;</span>免责声明：以下内容部分参考百度百科 <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&#39;https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4&#39;</span><span class="kw">&gt;</span>王大锤<span class="kw">&lt;/a&gt;</span> 这一次词条解释。<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-11"><a href="html-basics.html#cb20-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h2&gt;</span>基本信息<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb20-12"><a href="html-basics.html#cb20-12" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb20-13"><a href="html-basics.html#cb20-13" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
+<span id="cb20-14"><a href="html-basics.html#cb20-14" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>身高：170<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-15"><a href="html-basics.html#cb20-15" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-16"><a href="html-basics.html#cb20-16" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
+<span id="cb20-17"><a href="html-basics.html#cb20-17" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>体重：60 <span class="kw">&lt;em&gt;</span>公斤<span class="kw">&lt;/em&gt;</span>  <span class="kw">&lt;sup</span><span class="ot"> class=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;#dfref-footnote-1&#39;</span><span class="ot"> name=</span><span class="st">&#39;ref-footnote-1&#39;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
+<span id="cb20-18"><a href="html-basics.html#cb20-18" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-19"><a href="html-basics.html#cb20-19" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
+<span id="cb20-20"><a href="html-basics.html#cb20-20" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>性别：<span class="kw">&lt;strong&gt;</span>男<span class="kw">&lt;/strong&gt;</span> <span class="kw">&lt;sup</span><span class="ot"> class=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;#dfref-footnote-2&#39;</span><span class="ot"> name=</span><span class="st">&#39;ref-footnote-2&#39;</span><span class="kw">&gt;</span>2<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
+<span id="cb20-21"><a href="html-basics.html#cb20-21" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-22"><a href="html-basics.html#cb20-22" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
+<span id="cb20-23"><a href="html-basics.html#cb20-23" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>出生日期：<span class="kw">&lt;del&gt;</span>2000年0月0日<span class="kw">&lt;/del&gt;&lt;/p&gt;</span></span>
+<span id="cb20-24"><a href="html-basics.html#cb20-24" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-25"><a href="html-basics.html#cb20-25" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
+<span id="cb20-26"><a href="html-basics.html#cb20-26" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-27"><a href="html-basics.html#cb20-27" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;ol</span><span class="ot"> start=</span><span class="st">&#39;&#39;</span> <span class="kw">&gt;</span></span>
+<span id="cb20-28"><a href="html-basics.html#cb20-28" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;li&gt;</span>《万万没想到》<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-29"><a href="html-basics.html#cb20-29" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;li&gt;</span>《暴走大事件》<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-30"><a href="html-basics.html#cb20-30" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;/ol&gt;</span></span>
+<span id="cb20-31"><a href="html-basics.html#cb20-31" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
+<span id="cb20-32"><a href="html-basics.html#cb20-32" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;/ul&gt;</span></span></code></pre></div>
+
+<div class="rmdreminder">
+如何你打开后发现你的文档和上面的内容长得不一样，不用担心。对 HTML 而言，空格、空行都只是为了让人容易理解。在计算机眼里，上面的全部代码就算写成一行也无所谓。
+</div>
+<p>上面的几行 HTML 代码被计算机解析的结果，就是你在浏览器里看到的「王大锤简历」往下、「个人照片」往上的部分。</p>
+<p>我们一个一个来看：</p>
+<ul>
+<li><p><code>&lt;!doctype html&gt;</code> 这行代码是<a href="https://www.w3schools.com/tags/tag_doctype.asp">让浏览器知道这份文档是 HTML</a>。</p></li>
+<li><p><code>&lt;html&gt;</code> 的作用是把整个 HTML 文档的内容（除了 <code>&lt;!doctype html&gt;</code>）环绕起来。你在 <code>wangdachui.html</code> 的最底端能看到 <code>&lt;/html&gt;</code>。<code>&lt;html&gt;</code> 和 <code>&lt;/html&gt;</code> 之间的内容，就是 HTML 文档的内容。</p></li>
+<li><p><code>&lt;head&gt;</code> 里面放的是元数据。所谓元数据是指「关于数据的数据」。现阶段你只需要知道它里面可以包括 <code>&lt;title&gt;</code>标签，也就是标题。现在请看你的浏览器，如果你现在只打开了一个页面，请随便再打开一个网址。当你在两个页面之前切换的时，在你鼠标点击的位置就能看到 <code>&lt;title&gt;</code> 和 <code>&lt;/title&gt;</code> 之间的内容。</p></li>
+<li><p><code>&lt;body&gt;</code> 和 <code>&lt;/body&gt;</code> 之间的部分是我们用浏览器一份 HTML 文档后能看到的内容。</p></li>
+<li><p><code>h1</code>, <code>h2</code>, <code>h3</code>, … 是不同级别的标题。 <code>h1</code> 是一级标题，<code>h2</code> 是二级标题，<code>h3</code> 是三级标题，依此类推。最小的标题是 <code>h6</code>。数字越小，级别越高，字号越大。</p></li>
+<li><p><code>p</code>：段落</p></li>
+<li><p><code>&lt;a&gt;</code>：超链接</p></li>
+<li><p><code>ul</code>, <code>or</code>, <code>li</code>: 列表。<code>ul</code>(unordered list) 是无序列表，<code>or</code> (ordered list) 是带数字的那种有序列表。不管是有序列表，还是无序列表，列表中的每一项都需要用 <code>li</code> 来表示。</p></li>
+<li><p><code>em</code>：斜体。em 是 emphasize 的缩写。</p></li>
+<li><p><code>strong</code> 或者 <code>b</code>: 粗体。b 是 bold 的缩写。</p></li>
+</ul>
+<p>以上就是「个人照片」之前的部分中我们需要学到的东西。</p>
+</div>
+<div id="after-personal-photo" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> 「个人照片」之后的部分</h3>
+<ul>
+<li><p><code>img</code>：插入图片。<code>img</code> 标签有两个必需的属性：</p>
+<ul>
+<li><code>src</code>：source (来源) 的缩写，用于提示图片地址，可以直接插入网址，或者本地图片地址。</li>
+<li><code>alt</code>： 图片说明。我们<a href="markdown.html#image">之前讲过</a>，当图片无法显示，比如链接失效时，别人可以通过<code>alt</code> 里的内容来大体了解你这个图片是什么。还有一种情形是，专用浏览器可以通过读出 <code>alt</code> 里的内容来让盲人用户了解你的图片内容。</li>
+</ul></li>
+</ul>
+<p>除此之外，<code>img</code> 还可以通过 <code>height</code> 和 <code>width</code> 属性来改变图片的长度和宽度。</p>
+<p>需要注意的是，和上面所有的标签不同，<code>&lt;img&gt;</code> 不需要 <code>&lt;/img&gt;</code> 来结尾。</p>
+<p>我们来举一个栗子🌰：</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="html-basics.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;image/my_family.jpg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A photo of my family in 2005&quot;</span><span class="ot"> height=</span><span class="st">&quot;300&quot;</span><span class="ot"> width=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<p>上面这行代码需要注意的是，属性之间不需要逗号来间隔。<code>height</code> 和 <code>width</code> 的默认单位是像素 (pixels)。</p>
+<p>说到 <code>&lt;img&gt;</code> 我们就不得不提到 <code>&lt;figure&gt;</code>。<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间除了可以放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#images">图片</a>，还能放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#poems">诗</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#code_snippets">代码块</a>等。只要你觉得一些内容可以当成一个图像来看待，你就可以将其放到<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。比如 <code>wangdachui.html</code> 就把作品简介之下的表格放在了 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。</p>
+<p>有一点需要注意：即使把 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 去掉，浏览器显示的内容并不会有任何改变。</p>
 
 </div>
 </div>
