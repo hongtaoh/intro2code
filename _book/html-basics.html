@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-01-28" />
+<meta name="date" content="2021-02-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -383,21 +383,147 @@ Figure 3.6: 部署成功后的页面
 </div>
 <div id="after-personal-photo" class="section level3" number="3.4.2">
 <h3><span class="header-section-number">3.4.2</span> 「个人照片」之后的部分</h3>
-<ul>
-<li><p><code>img</code>：插入图片。<code>img</code> 标签有两个必需的属性：</p>
+<div id="html-img" class="section level4" number="3.4.2.1">
+<h4><span class="header-section-number">3.4.2.1</span> img</h4>
+<p><code>img</code>：插入图片。<code>img</code> 标签有两个必需的属性：</p>
 <ul>
 <li><code>src</code>：source (来源) 的缩写，用于提示图片地址，可以直接插入网址，或者本地图片地址。</li>
 <li><code>alt</code>： 图片说明。我们<a href="markdown.html#image">之前讲过</a>，当图片无法显示，比如链接失效时，别人可以通过<code>alt</code> 里的内容来大体了解你这个图片是什么。还有一种情形是，专用浏览器可以通过读出 <code>alt</code> 里的内容来让盲人用户了解你的图片内容。</li>
-</ul></li>
 </ul>
 <p>除此之外，<code>img</code> 还可以通过 <code>height</code> 和 <code>width</code> 属性来改变图片的长度和宽度。</p>
 <p>需要注意的是，和上面所有的标签不同，<code>&lt;img&gt;</code> 不需要 <code>&lt;/img&gt;</code> 来结尾。</p>
 <p>我们来举一个栗子🌰：</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="html-basics.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;image/my_family.jpg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A photo of my family in 2005&quot;</span><span class="ot"> height=</span><span class="st">&quot;300&quot;</span><span class="ot"> width=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <p>上面这行代码需要注意的是，属性之间不需要逗号来间隔。<code>height</code> 和 <code>width</code> 的默认单位是像素 (pixels)。</p>
+
+<div class="rmdtip">
+宽度（width）就可以了，因为浏览器默认图片长宽比保持不变。
+</div>
+</div>
+<div id="html-figure" class="section level4" number="3.4.2.2">
+<h4><span class="header-section-number">3.4.2.2</span> figure 与 figcaption</h4>
 <p>说到 <code>&lt;img&gt;</code> 我们就不得不提到 <code>&lt;figure&gt;</code>。<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间除了可以放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#images">图片</a>，还能放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#poems">诗</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#code_snippets">代码块</a>等。只要你觉得一些内容可以当成一个图像来看待，你就可以将其放到<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。比如 <code>wangdachui.html</code> 就把作品简介之下的表格放在了 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。</p>
 <p>有一点需要注意：即使把 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 去掉，浏览器显示的内容并不会有任何改变。</p>
+<p><code>&lt;figure&gt;</code> 最常见的用法是和 <code>&lt;img&gt;</code>及<code>&lt;figcaption&gt;</code> 一起用，这样可以在图片下面加上说明文字。比如：</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="html-basics.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure&gt;</span></span>
+<span id="cb22-2"><a href="html-basics.html#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;images/home.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Home Icon&quot;</span><span class="ot"> height=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-3"><a href="html-basics.html#cb22-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;figcaption&gt;</span>以上图标来自 https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb22-4"><a href="html-basics.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<figure>
+<img src="images/home.png" alt="Home Icon" height="300">
+<figcaption>
+以上图标来自 <a href="https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png" class="uri">https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png</a>
+</figcaption>
+</figure>
+</div>
+<div id="html-table" class="section level4" number="3.4.2.3">
+<h4><span class="header-section-number">3.4.2.3</span> Table</h4>
+<p>目前你只需要知道，<code>table</code>, <code>th</code>, <code>tr</code>, <code>td</code> 可以设置表格。其中，<code>th</code> （或者<code>thead</code>, 这两个一样）设置表头单元格，<code>tr</code> 设置行(row), <code>td</code> 设置具体的单元格。</p>
+<p>比如，</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb23-1"><a href="html-basics.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table&gt;</span></span>
+<span id="cb23-2"><a href="html-basics.html#cb23-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb23-3"><a href="html-basics.html#cb23-3" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;th&gt;</span>苏轼<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb23-4"><a href="html-basics.html#cb23-4" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;th&gt;</span>李白<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb23-5"><a href="html-basics.html#cb23-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb23-6"><a href="html-basics.html#cb23-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb23-7"><a href="html-basics.html#cb23-7" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>男<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-8"><a href="html-basics.html#cb23-8" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>男<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-9"><a href="html-basics.html#cb23-9" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb23-10"><a href="html-basics.html#cb23-10" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb23-11"><a href="html-basics.html#cb23-11" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>宋朝<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-12"><a href="html-basics.html#cb23-12" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>唐朝<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-13"><a href="html-basics.html#cb23-13" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb23-14"><a href="html-basics.html#cb23-14" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb23-15"><a href="html-basics.html#cb23-15" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>《念奴娇·赤壁怀》古<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-16"><a href="html-basics.html#cb23-16" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;td&gt;</span>静夜思<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb23-17"><a href="html-basics.html#cb23-17" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb23-18"><a href="html-basics.html#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<table>
+<tr>
+<th>
+苏轼
+</th>
+<th>
+李白
+</th>
+</tr>
+<tr>
+<td>
+男
+</td>
+<td>
+男
+</td>
+</tr>
+<tr>
+<td>
+北宋
+</td>
+<td>
+唐朝
+</td>
+</tr>
+<tr>
+<td>
+《念奴娇·赤壁怀古》、《水调歌头-明月几时有》
+</td>
+<td>
+《静夜思》、《蜀道难》
+</td>
+</tr>
+</table>
+<p>此外，还可以通过 <code>colspan</code> 和 <code>rowspan</code>来合并单元格，也可以用 <code>&lt;caption&gt;</code> 在表格开头设置文字说明。这里不展开讲，如有兴趣，参考<a href="https://www.footmark.info/web-design/html/html-table-structured-merge-group/">这里</a>。</p>
+</div>
+<div id="html-blockquote" class="section level4" number="3.4.2.4">
+<h4><span class="header-section-number">3.4.2.4</span> blockquote</h4>
+<p><code>&lt;blockquote&gt;</code> 可以用来设置引用，比如：</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="html-basics.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;blockquote&gt;</span></span>
+<span id="cb24-2"><a href="html-basics.html#cb24-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span> 这话不是我说的。— 鲁迅<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb24-3"><a href="html-basics.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/blockquote&gt;</span></span></code></pre></div>
+<blockquote>
+<p>
+这话不是我说的。— 鲁迅
+</p>
+</blockquote>
+</div>
+<div id="html-span-div" class="section level4" number="3.4.2.5">
+<h4><span class="header-section-number">3.4.2.5</span> span 和 div</h4>
+<p>span 的字面意思是「横跨」，div 是 division (区域、部分)。这两个在下面我们讲解 CSS 时会经常用到。现在你只需要知道，这两个都是把一个部分围绕起来。比如，我有两个段落，我想让第一段的字都用红色，第二段的字都用蓝色，那么，我可以：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb25-1"><a href="html-basics.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb25-2"><a href="html-basics.html#cb25-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第一段文字，红色<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb25-3"><a href="html-basics.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb25-4"><a href="html-basics.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb25-5"><a href="html-basics.html#cb25-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第二段文字，蓝色<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb25-6"><a href="html-basics.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<div style="color:red">
+<p>
+第一段文字，红色
+</p>
+</div>
+<div style="color:blue">
+<p>
+第二段文字，蓝色
+</p>
+</div>
+<p>当然，我也可以用 <code>span</code>：</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="html-basics.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-2"><a href="html-basics.html#cb26-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第一段文字，红色<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb26-3"><a href="html-basics.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/span&gt;</span></span>
+<span id="cb26-4"><a href="html-basics.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> style=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-5"><a href="html-basics.html#cb26-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第二段文字，蓝色<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb26-6"><a href="html-basics.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/span&gt;</span></span></code></pre></div>
+<span style="color:red">
+<p>
+第一段文字，红色
+</p>
+</span>
+<span style="color:blue">
+<p>
+第二段文字，蓝色
+</p>
+<p></span></p>
 
+</div>
 </div>
 </div>
 </div>

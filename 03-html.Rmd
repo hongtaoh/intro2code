@@ -245,7 +245,9 @@ git commit -m "$(date)"
 
 ### 「个人照片」之后的部分{#after-personal-photo}
 
-- `img`：插入图片。`img` 标签有两个必需的属性：
+#### img{#html-img}
+
+`img`：插入图片。`img` 标签有两个必需的属性：
   
    - `src`：source (来源) 的缩写，用于提示图片地址，可以直接插入网址，或者本地图片地址。
    - `alt`： 图片说明。我们[之前讲过](markdown.html#image)，当图片无法显示，比如链接失效时，别人可以通过`alt` 里的内容来大体了解你这个图片是什么。还有一种情形是，专用浏览器可以通过读出 `alt` 里的内容来让盲人用户了解你的图片内容。
@@ -262,10 +264,127 @@ git commit -m "$(date)"
   
 上面这行代码需要注意的是，属性之间不需要逗号来间隔。`height` 和 `width` 的默认单位是像素 (pixels)。
 
+```{block2, type='rmdtip'}
+宽度（width）就可以了，因为浏览器默认图片长宽比保持不变。
+```
+
+#### figure 与 figcaption{#html-figure}
+
 说到 `<img>` 我们就不得不提到 `<figure>`。`<figure>` 和 `</figure>` 之间除了可以放[图片](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#images)，还能放[诗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#poems)，[代码块](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#code_snippets)等。只要你觉得一些内容可以当成一个图像来看待，你就可以将其放到`<figure>` 和 `</figure>` 之间。比如 `wangdachui.html` 就把作品简介之下的表格放在了 `<figure>` 和 `</figure>` 之间。
 
 有一点需要注意：即使把 `<figure>` 和 `</figure>` 去掉，浏览器显示的内容并不会有任何改变。
 
+`<figure>` 最常见的用法是和 `<img>`及`<figcaption>` 一起用，这样可以在图片下面加上说明文字。比如：
 
+```{html}
+<figure>
+   <img src="images/home.png" alt="Home Icon" height="200">
+   <figcaption>以上图标来自 https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png</figcaption>
+</figure>
+```
 
+<figure>
+   <img src="images/home.png" alt="Home Icon" height="300">
+   <figcaption>以上图标来自 https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png</figcaption>
+</figure>
+
+#### Table{#html-table}
+
+目前你只需要知道，`table`, `th`, `tr`, `td` 可以设置表格。其中，`th` （或者`thead`, 这两个一样）设置表头单元格，`tr` 设置行(row), `td` 设置具体的单元格。
+
+比如，
+
+```{html}
+<table>
+   <tr>
+     <th>苏轼</th>
+     <th>李白</th>
+   </tr>
+   <tr>
+     <td>男</td>
+     <td>男</td>
+   </tr>
+   <tr>
+     <td>宋朝</td>
+     <td>唐朝</td>
+   </tr>
+   <tr>
+     <td>《念奴娇·赤壁怀》古</td>
+     <td>静夜思</td>
+   </tr>
+</table>
+```
+
+<table>
+   <tr>
+     <th>苏轼</th>
+     <th>李白</th>
+   </tr>
+   <tr>
+     <td>男</td>
+     <td>男</td>
+   </tr>
+   <tr>
+     <td>北宋</td>
+     <td>唐朝</td>
+   </tr>
+   <tr>
+     <td>《念奴娇·赤壁怀古》、《水调歌头-明月几时有》</td>
+     <td>《静夜思》、《蜀道难》</td>
+   </tr>
+</table>
+
+此外，还可以通过 `colspan` 和 `rowspan`来合并单元格，也可以用 `<caption>` 在表格开头设置文字说明。这里不展开讲，如有兴趣，参考[这里](https://www.footmark.info/web-design/html/html-table-structured-merge-group/)。
+
+#### blockquote{#html-blockquote}
+
+`<blockquote>` 可以用来设置引用，比如：
+
+```{html}
+<blockquote>
+   <p> 这话不是我说的。— 鲁迅</p>
+</blockquote>
+```
+
+<blockquote>
+   <p> 这话不是我说的。— 鲁迅</p>
+</blockquote>
+
+#### span 和 div{#html-span-div}
+
+span 的字面意思是「横跨」，div 是 division (区域、部分)。这两个在下面我们讲解 CSS 时会经常用到。现在你只需要知道，这两个都是把一个部分围绕起来。比如，我有两个段落，我想让第一段的字都用红色，第二段的字都用蓝色，那么，我可以：
+
+```{html}
+<div style="color:red">
+   <p>第一段文字，红色</p>
+</div>
+<div style="color:blue">
+   <p>第二段文字，蓝色</p>
+</div>
+```
+
+<div style="color:red">
+   <p>第一段文字，红色</p>
+</div>
+<div style="color:blue">
+   <p>第二段文字，蓝色</p>
+</div>
+
+当然，我也可以用 `span`：
+
+```{html}
+<span style="color:red">
+   <p>第一段文字，红色</p>
+</span>
+<span style="color:blue">
+   <p>第二段文字，蓝色</p>
+</span>
+```
+
+<span style="color:red">
+   <p>第一段文字，红色</p>
+</span>
+<span style="color:blue">
+   <p>第二段文字，蓝色</p>
+</span>
 

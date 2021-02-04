@@ -37,3 +37,8 @@ updating-often
 html-intro
 before-personal-photo
 after-personal-photo
+html-img
+html-figure
+html-table
+html-blockquote
+html-span-div
