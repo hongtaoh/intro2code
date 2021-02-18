@@ -1,0 +1,220 @@
+# CSS 基础{#css}
+
+这一章我们来讲 CSS。CSS 的全程是 Cascading Style Sheets，翻译成中文是层叠样式表。这一章我不打算讲的很细（我自己也只懂一点）。我会把最基础的内容，比如，CSS 的三种设置方式讲解清楚，至于更细节的内容，我会贴出我觉得比较好的教程，你可以做参考。
+
+CSS 是用来干什么的呢？
+
+回答这个问题之前，请用浏览器打开在上一章（第三章）你导出的那个不带格式的 `wangdachui.html` 文件。考虑几个很实际的问题，我们想把各级标题和图片居中怎么弄？标题和文本想用不同的字体弄么设置？段落间距我想更大一些呢？想把背景换一个颜色或者用一张图片当背景怎么弄？
+
+这些想法都可以用 CSS 来实现。
+
+我们首先来讲一下 CSS 的三种设置方式。
+
+现在有一个任务：我想把 `wangdachui.html` 这个文档的背景改成黑色，文字改成白色，其中「王大锤简历」这五个字用红色, 「出演作品」这四个字用橘黄色。我们用 CSS 来完成这一任务。
+
+## 方法一
+
+最直接的方法是直接改 `<body>` 、「王大锤简历」、「出演作品」的样式。
+
+`<body>` 和 `</body>` 之间的内容是我们用浏览器打开文件后能看到的内容。我们想把文档背景色改成黑色，文字改成白色，改动的内容是全部的文档，所以我们要动 `<body>`:
+
+```{html eval=FALSE}
+<html>
+<head>
+<title>wangdachui</title>
+</head>
+<body style="background-color:black; color:white">
+   <h1>王大锤简历</h1>
+   ...
+   ...
+</body>
+</html>
+```
+
+现在用浏览器打开，背景色和文本颜色已经改变了。现在，我们要把「王大锤简历」这五个字改成红色：
+
+```{html eval=FALSE}
+<h1 style="color:red">王大锤简历</h1>
+```
+
+把「出演作品」改成橘黄色：
+
+```{html eval=FALSE}
+<p style="color:orange">出演作品</p>
+```
+
+改好了。
+
+这种方法的优点是简单，快速。但是，当 HTML 中有很多内容都需要修改样式时，用这种方法会把 HTML 文档弄得乱七八糟，自己都不想看。
+
+## 方法二
+
+第二种方法是在 `<head>` 和 `</head>` 之间加入 CSS：
+
+```{html eval=FALSE}
+<html>
+<head>
+   <style type="text/css">
+		body {
+			background-color: black;
+			color: white;
+		}
+
+		h1 {
+			color:red;
+		}
+
+	</style>
+<title>wangdachui</title>
+</head>
+<body>
+   <h1>王大锤简历</h1>
+   ...
+   ...
+</body>
+</html>
+```
+
+上面的代码就把背景、文本颜色、和「王大锤简历」这五个字的颜色改好了。这里需要注意的是，我们不能直接用 `p {color:orange}` 来修改「出演作品」的文本颜色，为什么呢？
+
+这里需要讲一下，`body`、`h1`、`h2`、`p` 这些叫「标签」或者 HTML 「元素」。上面的代码我们可以直接定义 `body` 和 `h1` 的样式，是因为在 `wangdachui.html` 中，`body` 和 `h1` 只有一个。但是 `p` 有好多个。直接用 `p {color:orange}` 的话，所有的被 `<p></p>` 包围的内容都会变成橘黄色，这不是我们想要的。
+
+现在的问题是，我们如何只定义 `<p>出演作品</p>` 这一行的样式呢？这就需要用到「类」，即 class。
+
+我们可以给 `<p>出演作品</p>`分配一个 class, 比如 `class = "orange-text"`，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。
+
+第一步是：
+
+```{html eval=FALSE}
+<p class="orange-text">出演作品</p>
+```
+
+第二步：
+
+```{html css2, eval=FALSE}
+<html>
+<head>
+   <style type="text/css">
+		body {
+			background-color: black;
+			color: white;
+		}
+
+		h1 {
+			color:red;
+		}
+		
+		.text-orange {
+		   color: orange;
+		}
+	</style>
+<title>wangdachui</title>
+</head>
+<body>
+   <h1>王大锤简历</h1>
+   ...
+   ...
+</body>
+</html>
+```
+
+这个知识点非常重要，因为在 CSS 中，「类」我们经常会用到。
+
+讲到「类」，有两个点需要注意：
+
+1. 一个「类」可以被多个不同元素多次使用。比如，我们想「个人照片」这几个字也改成橘黄色，那么只需要：
+
+```{html eval=FALSE}
+   <h2 class="text-orange">个人照片</h2>
+```
+   
+这样，只有这一个二级标题会变成橘黄色（别的二级标题，比如「基本信息」则不变）。
+
+2. 多个类可以放在一起
+
+比如，你不仅想让「个人照片」这四个字变成橘黄色，还想让这四个字和它下面的内容隔开（比如，相隔 300 个像素）。直接修改 `text-orange` 是不行的，那么做的话「出演作品」的样式也会被修改。
+
+这时候，我们可以给 `<h2>个人照片</h2>` 多加一个「类」：
+
+```{html eval=FALSE}
+<h2 class="text-orange go-down">个人照片</h2>
+```
+
+两个「类」之间需要有一个空格，浏览器会自动识别出这是两个不同的「类」。
+
+然后，在 CSS 中添加：
+
+```{css eval=FALSE}
+.go-down {
+  margin-bottom: 300px;
+}
+```
+   
+直接写成 `.go-down {margin-bottom: 300px}` 也可以，第一种方法看起来更直观。
+   
+讲到这里，顺带讲一下，两个「选择器」可以同时被定义。什么是选择器呢？`h1 {color:red;}` 和 `.go-down {margin-bottom: 300px}` 中，`h1` 和 `.go-down` 都叫做选择器，前者叫「元素选择器」，因为是 HTML 自带的元素，比如 `body`, `h1`, `p` 等，后者叫「类选择器」。
+
+假设我们现在想把「常用语」这三个字也改成红色。我们可以给它加一个「类」：
+
+```{html eval=FALSE}
+<h2 class="text-red">常用语</h2》
+```
+
+然后，在上面的 CSS 中，直接用：
+
+```{css eval=FALSE}
+h1，
+.text-red {
+  color:red;
+}
+```
+
+## 方法三
+
+第三种方法，也是比较推荐，也常用的方法，是在 `head` 中加入一个外部链接：
+
+```{html eval=FALSE}
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+```
+
+在文本编辑器中新建一个文档，将其命名为 `style.css`（你可以用任何你喜欢的名字），加入以下内容：
+
+```{css eval=FALSE}
+body {
+  background-color: black;
+	color: white;
+}
+
+h1,
+.text-red {
+  color:red;
+}
+
+.text-orange {
+  color: orange;
+}
+		
+.go-down {
+  margin-bottom: 300px;
+}
+```
+
+CSS 到这里就讲完了。当然，我只讲了框架。具体的细节一本书都写不完。
+
+以上内容参考 [安用烈老师](http://yongyeol.com/) 的[教程](https://github.com/yy/dviz-course/blob/master/m02-history/lab02.ipynb) (HTML & CSS Basics)。
+
+列几个可能有用的资料：
+
+- MDN [CSS 基础](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
+
+```{block2 type="rmdtip"}
+这个教程写得很好，强烈推荐！
+
+- LiHongyao [css 基础知识总结](https://github.com/LiHongyao/CSS)
+```
+
+- HTML 中文网 [CSS基础知识点总结](https://www.html.cn/web/css/11222.html)
+
+
