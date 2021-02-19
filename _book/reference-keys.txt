@@ -4,6 +4,7 @@ fig:new-repo-url
 fig:new-repo-index
 fig:new-repo-gh-pages-01
 fig:new-repo-gh-pages-02
+fig:css-gif
 prep
 github
 terminal

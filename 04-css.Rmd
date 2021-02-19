@@ -12,6 +12,12 @@ CSS 是用来干什么的呢？
 
 现在有一个任务：我想把 `wangdachui.html` 这个文档的背景改成黑色，文字改成白色，其中「王大锤简历」这五个字用红色, 「出演作品」这四个字用橘黄色。我们用 CSS 来完成这一任务。
 
+```{r css-gif, echo=FALSE, fig.cap="CSS 其实挺让人头大的", fig.align='center', out.width = "50%"}
+knitr::include_graphics('https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif')
+```
+
+动图出处：https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif
+
 ## 方法一
 
 最直接的方法是直接改 `<body>` 、「王大锤简历」、「出演作品」的样式。
@@ -157,7 +163,7 @@ CSS 是用来干什么的呢？
 假设我们现在想把「常用语」这三个字也改成红色。我们可以给它加一个「类」：
 
 ```{html eval=FALSE}
-<h2 class="text-red">常用语</h2》
+<h2 class="text-red">常用语</h2>
 ```
 
 然后，在上面的 CSS 中，直接用：

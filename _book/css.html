@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-02-18" />
+<meta name="date" content="2021-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -213,6 +213,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>这些想法都可以用 CSS 来实现。</p>
 <p>我们首先来讲一下 CSS 的三种设置方式。</p>
 <p>现在有一个任务：我想把 <code>wangdachui.html</code> 这个文档的背景改成黑色，文字改成白色，其中「王大锤简历」这五个字用红色, 「出演作品」这四个字用橘黄色。我们用 CSS 来完成这一任务。</p>
+<div class="figure" style="text-align: center"><span id="fig:css-gif"></span>
+<img src="https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif" alt="CSS 其实挺让人头大的" width="50%" />
+<p class="caption">
+Figure 4.1: CSS 其实挺让人头大的
+</p>
+</div>
+<p>动图出处：<a href="https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif" class="uri">https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif</a></p>
 <div id="方法一" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> 方法一</h2>
 <p>最直接的方法是直接改 <code>&lt;body&gt;</code> 、「王大锤简历」、「出演作品」的样式。</p>
@@ -310,7 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>直接写成 <code>.go-down {margin-bottom: 300px}</code> 也可以，第一种方法看起来更直观。</p>
 <p>讲到这里，顺带讲一下，两个「选择器」可以同时被定义。什么是选择器呢？<code>h1 {color:red;}</code> 和 <code>.go-down {margin-bottom: 300px}</code> 中，<code>h1</code> 和 <code>.go-down</code> 都叫做选择器，前者叫「元素选择器」，因为是 HTML 自带的元素，比如 <code>body</code>, <code>h1</code>, <code>p</code> 等，后者叫「类选择器」。</p>
 <p>假设我们现在想把「常用语」这三个字也改成红色。我们可以给它加一个「类」：</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb37-1"><a href="css.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span><span class="ot"> class=</span><span class="st">&quot;text-red&quot;</span><span class="kw">&gt;</span>常用语<span class="kw">&lt;/h2</span><span class="er">》</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb37-1"><a href="css.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span><span class="ot"> class=</span><span class="st">&quot;text-red&quot;</span><span class="kw">&gt;</span>常用语<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
 <p>然后，在上面的 CSS 中，直接用：</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb38-1"><a href="css.html#cb38-1" aria-hidden="true" tabindex="-1"></a>h1，</span>
 <span id="cb38-2"><a href="css.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.text-red</span> {</span>
