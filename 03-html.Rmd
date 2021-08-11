@@ -42,7 +42,7 @@ knitr::include_graphics('static/img/new-repo-url.png')
 
 打开终端之后：
 
-- 如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 [这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE) 或 [这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
+- 如果你是第一次使用 git, 你可能需要设置一些内容。在终端输入 `git config --global user.name "你的git用户名"`, 以及 `git config --global user.email "你的邮箱"`。用你的 GitHub 用户名和与 GitHub 绑定的邮箱应该就可以。不懂的话，请参考 [这里](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
 
 - 使用苹果电脑的同学，我建议你把 `wangdachui` 这个文件夹拖到桌面上，然后在 Terminal 中输入：
 

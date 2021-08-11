@@ -87,12 +87,12 @@ knitr::include_graphics('https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c82
 
 现在的问题是，我们如何只定义 `<p>出演作品</p>` 这一行的样式呢？这就需要用到「类」，即 class。
 
-我们可以给 `<p>出演作品</p>`分配一个 class, 比如 `class = "orange-text"`，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。
+我们可以给 `<p>出演作品</p>`分配一个 class, 比如 `class = "text-orange"`，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。
 
 第一步是：
 
 ```{html eval=FALSE}
-<p class="orange-text">出演作品</p>
+<p class="text-orange">出演作品</p>
 ```
 
 第二步：
@@ -216,9 +216,9 @@ CSS 到这里就讲完了。当然，我只讲了框架。具体的细节一本�
 - MDN [CSS 基础](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
 
 ```{block2 type="rmdtip"}
-这个教程写得很好，强烈推荐！
-
 - LiHongyao [css 基础知识总结](https://github.com/LiHongyao/CSS)
+
+这个教程写得很好，强烈推荐！
 ```
 
 - HTML 中文网 [CSS基础知识点总结](https://www.html.cn/web/css/11222.html)

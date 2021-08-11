@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-02-19" />
+<meta name="date" content="2021-05-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -268,9 +268,9 @@ Figure 4.1: CSS 其实挺让人头大的
 <p>上面的代码就把背景、文本颜色、和「王大锤简历」这五个字的颜色改好了。这里需要注意的是，我们不能直接用 <code>p {color:orange}</code> 来修改「出演作品」的文本颜色，为什么呢？</p>
 <p>这里需要讲一下，<code>body</code>、<code>h1</code>、<code>h2</code>、<code>p</code> 这些叫「标签」或者 HTML 「元素」。上面的代码我们可以直接定义 <code>body</code> 和 <code>h1</code> 的样式，是因为在 <code>wangdachui.html</code> 中，<code>body</code> 和 <code>h1</code> 只有一个。但是 <code>p</code> 有好多个。直接用 <code>p {color:orange}</code> 的话，所有的被 <code>&lt;p&gt;&lt;/p&gt;</code> 包围的内容都会变成橘黄色，这不是我们想要的。</p>
 <p>现在的问题是，我们如何只定义 <code>&lt;p&gt;出演作品&lt;/p&gt;</code> 这一行的样式呢？这就需要用到「类」，即 class。</p>
-<p>我们可以给 <code>&lt;p&gt;出演作品&lt;/p&gt;</code>分配一个 class, 比如 <code>class = "orange-text"</code>，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。</p>
+<p>我们可以给 <code>&lt;p&gt;出演作品&lt;/p&gt;</code>分配一个 class, 比如 <code>class = "text-orange"</code>，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。</p>
 <p>第一步是：</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb32-1"><a href="css.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;orange-text&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb32-1"><a href="css.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;text-orange&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>第二步：</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb33-1"><a href="css.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb33-2"><a href="css.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
@@ -356,10 +356,12 @@ Figure 4.1: CSS 其实挺让人头大的
 </ul>
 
 <div class="rmdtip">
-<p>这个教程写得很好，强烈推荐！</p>
 <ul>
-<li>LiHongyao <a href="https://github.com/LiHongyao/CSS">css 基础知识总结</a>
-</div></li>
+<li>LiHongyao <a href="https://github.com/LiHongyao/CSS">css 基础知识总结</a></li>
+</ul>
+这个教程写得很好，强烈推荐！
+</div>
+<ul>
 <li>HTML 中文网 <a href="https://www.html.cn/web/css/11222.html">CSS基础知识点总结</a></li>
 </ul>
 
