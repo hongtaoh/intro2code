@@ -6,11 +6,13 @@
 
 用浏览器打开这份 HTML 文档，你可以看到和你在 [2.3 Markdown 练习中](markdown.html#md-exercise) 看到的结果一致。你现在看到的就是一个最基本的网页了。
 
+## 苹果系统安装 Git
+
+我们接下来要用到 Git。苹果系统安装 Git 的方法参考[这里](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87)。
+
 ## Windows 系统安装 Git
 
-我们接下来要用到 Git。苹果电脑已经预装了 Git, 所以不需要提前准备。使用Windows 系统的同学，需要先安装 Git。
-
-首先，按照[这个步骤](https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html)看一下你的电脑系统类型是32位还是64位。然后点击[这里](https://git-scm.com/download/win)，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 [32 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe) 或者 [64 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe)。
+使用Windows 系统的同学，首先，按照[这个步骤](https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html)看一下你的电脑系统类型是32位还是64位。然后点击[这里](https://git-scm.com/download/win)，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 [32 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe) 或者 [64 位](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe)。
 
 下载好之后的 Git 安装过程请参考 [这里](https://www.cnblogs.com/xueweisuoyong/p/11914045.html)。需要注意的是，上面这个教程是根据 Git 2.24.02 做的，如果你刚才下载的 Git 版本号和这个不一样，具体的步骤可能有一些差异。比如，2021年1月14号更新的 Git 2.30.0.2 版本，在安装时，第 7 步 是上面那个教程的第 6 步，而新版本的第 6 步是 Adjusting the name of the initial branch in new repositories, 你直接选择默认的 Let Git decide 就好。同样，新版本安装时让你 Choose the default behavior of `git pull` 时，你也选择默认的 Default (fast-foward or merge) 就好。
 

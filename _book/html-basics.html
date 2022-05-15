@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>第 3 章 HTML 基本知识 | 实用编程入门指南</title>
   <meta name="description" content="编程入门" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="第 3 章 HTML 基本知识 | 实用编程入门指南" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2022-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="markdown.html"/>
 <link rel="next" href="css.html"/>
-<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -59,6 +59,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -119,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
@@ -149,16 +151,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="markdown.html"><a href="markdown.html#md-grammer"><i class="fa fa-check"></i><b>2.2</b> Markdown 语法讲解</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="markdown.html"><a href="markdown.html#标题"><i class="fa fa-check"></i><b>2.2.1</b> 标题</a></li>
-<li class="chapter" data-level="2.2.2" data-path="markdown.html"><a href="markdown.html#粗体斜体"><i class="fa fa-check"></i><b>2.2.2</b> 粗体、斜体</a></li>
-<li class="chapter" data-level="2.2.3" data-path="markdown.html"><a href="markdown.html#列表"><i class="fa fa-check"></i><b>2.2.3</b> 列表</a></li>
-<li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.4</b> 表格</a></li>
-<li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.5</b> 引语</a></li>
-<li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.6</b> 链接</a></li>
-<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#image"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
-<li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.8</b> 代码</a></li>
-<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.9</b> 注释</a></li>
-<li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.10</b> HTML</a></li>
-<li class="chapter" data-level="2.2.11" data-path="markdown.html"><a href="markdown.html#分隔线"><i class="fa fa-check"></i><b>2.2.11</b> 分隔线</a></li>
+<li class="chapter" data-level="2.2.2" data-path="markdown.html"><a href="markdown.html#列表"><i class="fa fa-check"></i><b>2.2.2</b> 列表</a></li>
+<li class="chapter" data-level="2.2.3" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.3</b> 表格</a></li>
+<li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.4</b> 引语</a></li>
+<li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.5</b> 链接</a></li>
+<li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#image"><i class="fa fa-check"></i><b>2.2.6</b> 插入图片</a></li>
+<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.7</b> 代码</a></li>
+<li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.8</b> 注释</a></li>
+<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.9</b> HTML</a></li>
+<li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#分隔线"><i class="fa fa-check"></i><b>2.2.10</b> 分隔线</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="markdown.html"><a href="markdown.html#md-exercise"><i class="fa fa-check"></i><b>2.3</b> Markdown 练习</a>
 <ul>
@@ -167,16 +168,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="html-basics.html"><a href="html-basics.html"><i class="fa fa-check"></i><b>3</b> HTML 基本知识</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.1</b> Windows 系统安装 Git</a></li>
-<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.2</b> 网页部署</a></li>
-<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.3</b> 更新内容</a>
+<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#苹果系统安装-git"><i class="fa fa-check"></i><b>3.1</b> 苹果系统安装 Git</a></li>
+<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.2</b> Windows 系统安装 Git</a></li>
+<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.3</b> 网页部署</a></li>
+<li class="chapter" data-level="3.4" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.4</b> 更新内容</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.3.1</b> 经常更新怎么办</a></li>
+<li class="chapter" data-level="3.4.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.4.1</b> 经常更新怎么办</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="html-basics.html"><a href="html-basics.html#html-intro"><i class="fa fa-check"></i><b>3.4</b> HTML</a>
+<li class="chapter" data-level="3.5" data-path="html-basics.html"><a href="html-basics.html#html-intro"><i class="fa fa-check"></i><b>3.5</b> HTML</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="html-basics.html"><a href="html-basics.html#before-personal-photo"><i class="fa fa-check"></i><b>3.4.1</b> 我们先来看「个人照片」之前的部分</a></li>
-<li class="chapter" data-level="3.4.2" data-path="html-basics.html"><a href="html-basics.html#after-personal-photo"><i class="fa fa-check"></i><b>3.4.2</b> 「个人照片」之后的部分</a></li>
+<li class="chapter" data-level="3.5.1" data-path="html-basics.html"><a href="html-basics.html#before-personal-photo"><i class="fa fa-check"></i><b>3.5.1</b> 我们先来看「个人照片」之前的部分</a></li>
+<li class="chapter" data-level="3.5.2" data-path="html-basics.html"><a href="html-basics.html#after-personal-photo"><i class="fa fa-check"></i><b>3.5.2</b> 「个人照片」之后的部分</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS 基础</a>
@@ -210,32 +212,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>如果使用 Typora 完成的之前布置的Markdown 的作业，答案请参考<a href="static/files/wangdachui.md">这里</a>。请检查下是否和你的答案一致。</p>
 <p>用 Typora 打开这份 Markdown 文档后，选择 文件 (File) <span class="math inline">\(\to\)</span> 导出 (Export) <span class="math inline">\(\to\)</span> HTML (without styles). 导出后的 <code>HTML</code> 文档应该是<a href="static/files/wangdachui.html">这样</a>。</p>
 <p>用浏览器打开这份 HTML 文档，你可以看到和你在 <a href="markdown.html#md-exercise">2.3 Markdown 练习中</a> 看到的结果一致。你现在看到的就是一个最基本的网页了。</p>
-<div id="windows-系统安装-git" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Windows 系统安装 Git</h2>
-<p>我们接下来要用到 Git。苹果电脑已经预装了 Git, 所以不需要提前准备。使用Windows 系统的同学，需要先安装 Git。</p>
-<p>首先，按照<a href="https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html">这个步骤</a>看一下你的电脑系统类型是32位还是64位。然后点击<a href="https://git-scm.com/download/win">这里</a>，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe">32 位</a> 或者 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe">64 位</a>。</p>
+<div id="苹果系统安装-git" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 苹果系统安装 Git</h2>
+<p>我们接下来要用到 Git。苹果系统安装 Git 的方法参考<a href="https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">这里</a>。</p>
+</div>
+<div id="windows-系统安装-git" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Windows 系统安装 Git</h2>
+<p>使用Windows 系统的同学，首先，按照<a href="https://jingyan.baidu.com/article/90bc8fc891f349f652640c6e.html">这个步骤</a>看一下你的电脑系统类型是32位还是64位。然后点击<a href="https://git-scm.com/download/win">这里</a>，根据你电脑的系统类型，在 Git for Windows Setup 这个选项里，相应地下载安装 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-32-bit.exe">32 位</a> 或者 <a href="https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe">64 位</a>。</p>
 <p>下载好之后的 Git 安装过程请参考 <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">这里</a>。需要注意的是，上面这个教程是根据 Git 2.24.02 做的，如果你刚才下载的 Git 版本号和这个不一样，具体的步骤可能有一些差异。比如，2021年1月14号更新的 Git 2.30.0.2 版本，在安装时，第 7 步 是上面那个教程的第 6 步，而新版本的第 6 步是 Adjusting the name of the initial branch in new repositories, 你直接选择默认的 Let Git decide 就好。同样，新版本安装时让你 Choose the default behavior of <code>git pull</code> 时，你也选择默认的 Default (fast-foward or merge) 就好。</p>
 <p>总之一句话，参考上面的教程，安装过程中如果有和教程中提到的步骤不一样的情况，直接选择默认的选项。</p>
 <p>Git 安装好之后，就可以打开 Git Bash 了。我们接下来要用到。</p>
 </div>
-<div id="deploy-html" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> 网页部署</h2>
+<div id="deploy-html" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 网页部署</h2>
 <p>在讲解 HTML 只是之前，我们先把刚才的网页放到网上。别人能看到的网页才是真正的网页。</p>
 <p>第一步，在你的电脑上创建一个文件夹，将其命名为 wangdachui。然后把刚才导出的 HTML 文件重新命名为 <code>index.html</code> 并放到 wangdachui 这个文件夹。</p>
 <p>第二步，请确保你已经有了一个 <a href="https://github.com/">GitHub</a> 账号。登陆之后，在屏幕右上角你的 GitHub 头像左侧有一个 <span class="math inline">\(+\)</span> 的标志。点击它，然后选择 New repository。在出现的页面中，在 Repository name 那里填上 wangdachui 或者任何你觉得合适的名字。其它都不要动，然后点击 Create repository。在随后出现的页面中，在 “Quick setup — if you’ve done this kind of thing before” 下面那一行，HTTP/SSH 后面有个网址，应该是 <a href="https://github.com/hongtaoh/wangdachui.git" class="uri">https://github.com/hongtaoh/wangdachui.git</a> 这样的形式。把这个网址复制下来。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo"></span>
 <img src="https://hongtaoh.com/media/netlify/deploy-1.png" alt="登陆 GitHub 之后，选择 New repository" width="50%" />
 <p class="caption">
 Figure 3.1: 登陆 GitHub 之后，选择 New repository
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-new"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo-new"></span>
 <img src="static/img/new-repo-name.png" alt="新建仓库设置" width="80%" />
 <p class="caption">
 Figure 3.2: 新建仓库设置
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-url"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo-url"></span>
 <img src="static/img/new-repo-url.png" alt="新建仓库 URL" width="100%" />
 <p class="caption">
 Figure 3.3: 新建仓库 URL
@@ -248,7 +253,7 @@ Figure 3.3: 新建仓库 URL
 <li><p>使用苹果电脑的同学，我建议你把 <code>wangdachui</code> 这个文件夹拖到桌面上，然后在 Terminal 中输入：</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="html-basics.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Desktop/wangdachui</span></code></pre></div></li>
 <li><p>使用 Windowns 系统的同学，在 Git Bash 中输入：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:\wangdachui</span></code></pre></div></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="html-basics.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> H:<span class="dt">\w</span>angdachui</span></code></pre></div></li>
 </ul>
 <p>如果你不确定路径是什么，输完 <code>cd</code> 之后，按一下空格，然后直接把 <code>wangdachui</code> 这个文件夹拖到终端中，路径会自动显示出来。</p>
 <p><code>cd</code> 是英文 change directory 的缩写。change directory 的意思是「改变路径」，也就是告诉终端之后我们要输入的代码要作用于哪一个项目。</p>
@@ -256,10 +261,10 @@ Figure 3.3: 新建仓库 URL
 <p>随后，不管你的电脑是什么系统，请在你的终端中输入：</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="html-basics.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
 <span id="cb16-2"><a href="html-basics.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb16-3"><a href="html-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;my first commit.&quot;</span></span>
+<span id="cb16-3"><a href="html-basics.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;my first commit.&quot;</span></span>
 <span id="cb16-4"><a href="html-basics.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/hongtaoh/wangdachui.git</span>
 <span id="cb16-5"><a href="html-basics.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 请注意，https://github.com/hongtaoh/wangdachui.git 一定要替换为你自己的链接！！！</span></span>
-<span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push -u origin master</span></code></pre></div>
+<span id="cb16-6"><a href="html-basics.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin master</span></code></pre></div>
 <p>这个代码块你直接复制粘贴就行。粘贴完之后，按一下回车键。</p>
 <p>上面几行代码需要注意的是：</p>
 <ol style="list-style-type: decimal">
@@ -271,28 +276,28 @@ Figure 3.3: 新建仓库 URL
 </ol>
 <p>使用 Windows 系统的同学，如果你是第一次使用 Git，按完回车后，因为最后一步是往 GitHub 上传内容，你会被要求登陆 (Sign in) GitHub, 点击 Sign in with your browser 就可以，然后你会被要求 Authorize Git Credential Manager，点击绿色的 Authorize GitCredentialManager，在随后的页面中输入你的 GitHub 密码 (password)。随后，可能还会出现 OpenSSH 的页面，让你输入 GitHub 用户名 (Username for ‘<a href="https://github.com" class="uri">https://github.com</a>’:)，按要求输入然后点击 OK 就好。Show input 可点可不点，点开的话你就可以看到你输的内容。</p>
 <p>上面的代码运行结束后，回到 GitHub, 点开 wangdachui 这个项目，不出意外的话，你会看到 <code>index.html</code> 已经躺在你刚创建的仓库里了。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-index"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo-index"></span>
 <img src="static/img/new-repo-index.png" alt="index.html 上传成功的页面" width="100%" />
 <p class="caption">
 Figure 3.4: index.html 上传成功的页面
 </p>
 </div>
 <p>现在，请点击上面那个图片中的 Settings。进入 Settings 页面后，一直往下拖，到你看到 GitHub Pages 为止。在 Source 下面，点击那个 None, 选择 master, 在 master 右侧那里选择 /(root), 然后点击 Save, 你应该能看到 “Your site is ready to be published at <a href="http://你的用户名.github.io/wangdachui/" class="uri">http://你的用户名.github.io/wangdachui/</a>”。稍微等一分钟，刷新网页，当这行字变为绿底，内容变为 “Your site is published at …” 时，点击那个网址，不出意外的话，你应该就能看到我们刚才那个网页内容了。现在，任何知道你这个网址的人都可以打开这个网页。</p>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-gh-pages-01"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo-gh-pages-01"></span>
 <img src="static/img/gh-pages-01.png" alt="点击 None, 选择 master" width="90%" />
 <p class="caption">
 Figure 3.5: 点击 None, 选择 master
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:new-repo-gh-pages-02"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:new-repo-gh-pages-02"></span>
 <img src="static/img/gh-pages-02.png" alt="部署成功后的页面" width="100%" />
 <p class="caption">
 Figure 3.6: 部署成功后的页面
 </p>
 </div>
 </div>
-<div id="content-update" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> 更新内容</h2>
+<div id="content-update" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> 更新内容</h2>
 <p>一个现实的问题是，假如 <code>wangdachui</code> 这个仓库放的是你的个人网站，那么你需要经常更新内容。内容更新之后如何上传这些变动？这是这一节我们要讲的问题。</p>
 <p>首先，回到你电脑上 <code>wangdachui</code> 文件夹里的 <code>index.html</code>这个文件。右键 <span class="math inline">\(\to\)</span> 打开方式，然后用你之前选择并下载好的<a href="prep.html#text-editor">文本编辑器</a>打开 <code>index.html</code> 这个文件。需要注意的是要用文本编辑器打开，而不是默认的浏览器打开，因为我们接下来要编辑这个文档。</p>
 <p>打开之后，把 <code>王大锤简历</code> 改成 <code>王大锤的简历</code>，然后点击 <code>ctrl</code> + <code>s</code> （苹果电脑是 <code>command</code> + <code>s</code>) 保存。</p>
@@ -310,21 +315,21 @@ Figure 3.6: 部署成功后的页面
 <p>最后，<code>git push -u origin master</code> 这一行代码的目的是把我们刚才的变动上传到我们创立的远程仓库中的 master 分支 (branch)。<code>origin</code> 在这里指的就是我们那个远程仓库。不过，这里需要注意的是，<code>git push -u origin master</code> 一般是<a href="https://github.com/git-guides/git-push">第一次上传的时候用</a>，之后只用 <code>git push origin master</code> 就可以。想了解具体情况，请看<a href="https://stackoverflow.com/questions/5697750/what-exactly-does-the-u-do-git-push-u-origin-master-vs-git-push-origin-ma">这个帖子</a>。</p>
 <p>总结一下，我们需要用：</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="html-basics.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb17-2"><a href="html-basics.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;更新内容&quot;</span></span>
+<span id="cb17-2"><a href="html-basics.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;更新内容&quot;</span></span>
 <span id="cb17-3"><a href="html-basics.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin master</span></code></pre></div>
-<div id="updating-often" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> 经常更新怎么办</h3>
+<div id="updating-often" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> 经常更新怎么办</h3>
 <p>如果我们需要经常更新内容，老是重复上面的三行代码会很麻烦，有没有更简单的办法呢？</p>
 <p>现在，请打开你喜欢用的文本编辑器 (text editor)，把上面的三行代码复制粘贴，然后把文件保存为 <code>deploy.sh</code>。不一定非要用 <code>deploy</code> 这个名字，你换别的也行，不过最后的那个 <code>.sh</code> 后缀一定要用。保存完之后，把 <code>deploy.sh</code> 这个文件放到 <code>wangdachui</code> 这个文件夹之下。</p>
 <p>每次我们更新完内容后，在用 <code>cd</code> 改变路径到 <code>wangdachui</code> 这个文件夹之后，只需要在终端中输入</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="html-basics.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> deploy.sh</span></code></pre></div>
 <p>有个问题是，<code>git commit -m "更新内容"</code> 最好可以换成</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="html-basics.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;</span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="html-basics.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>这样我们之后就知道每次更新是在什么时间进行的。</p>
 </div>
 </div>
-<div id="html-intro" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> HTML</h2>
+<div id="html-intro" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> HTML</h2>
 <p>现在我们开始正式讲解 HTML 基本知识。</p>
 <p>首先，如果 <a href="markdown.html#md-exercise">2.3 Markdown 练习</a> 你是在 <a href="https://stackedit.io/app#">https://stackedit.io/app</a> 在线制作的，现在请用 Typora 重新做一遍。</p>
 <p>完成后再用 Typora 把这份 Markdown 文档导出为 <strong>HTML (without styles)</strong>。一定要选择「无格式」，因为我们接下来要学习导出的 HTML 内容，如果带格式的话太复杂，不利于我们初期学习。不会导出的同学，请看这一章<a href="html-basics.html">开头的讲解</a>。</p>
@@ -333,35 +338,35 @@ Figure 3.6: 部署成功后的页面
 <div class="rmdnote">
 以下我提到 <code>wangdachui.html</code> 时，除非特殊说明，都是指你用文本编辑器（而非浏览器）打开后看到的内容。
 </div>
-<div id="before-personal-photo" class="section level3" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> 我们先来看「个人照片」之前的部分</h3>
+<div id="before-personal-photo" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> 我们先来看「个人照片」之前的部分</h3>
 <div class="sourceCode" id="cb20"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="html-basics.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
 <span id="cb20-2"><a href="html-basics.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb20-3"><a href="html-basics.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb20-4"><a href="html-basics.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&#39;UTF-8&#39;</span><span class="kw">&gt;&lt;meta</span><span class="ot"> name=</span><span class="st">&#39;viewport&#39;</span><span class="ot"> content=</span><span class="st">&#39;width=device-width initial-scale=1&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb20-4"><a href="html-basics.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&#39;UTF-8&#39;</span><span class="kw">&gt;&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&#39;viewport&#39;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&#39;width=device-width initial-scale=1&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb20-5"><a href="html-basics.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>wangdachui<span class="kw">&lt;/title&gt;</span></span>
 <span id="cb20-6"><a href="html-basics.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
 <span id="cb20-7"><a href="html-basics.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
 <span id="cb20-8"><a href="html-basics.html#cb20-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h1&gt;</span>王大锤简历 <span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb20-9"><a href="html-basics.html#cb20-9" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;p&gt;</span>以上是一级标题，以下全都是二级标题。<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb20-10"><a href="html-basics.html#cb20-10" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;p&gt;</span>免责声明：以下内容部分参考百度百科 <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&#39;https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4&#39;</span><span class="kw">&gt;</span>王大锤<span class="kw">&lt;/a&gt;</span> 这一次词条解释。<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb20-10"><a href="html-basics.html#cb20-10" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;p&gt;</span>免责声明：以下内容部分参考百度百科 <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&#39;https://baike.baidu.com/item/%E7%8E%8B%E5%A4%A7%E9%94%A4&#39;</span><span class="kw">&gt;</span>王大锤<span class="kw">&lt;/a&gt;</span> 这一次词条解释。<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb20-11"><a href="html-basics.html#cb20-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h2&gt;</span>基本信息<span class="kw">&lt;/h2&gt;</span></span>
 <span id="cb20-12"><a href="html-basics.html#cb20-12" aria-hidden="true" tabindex="-1"></a>     <span class="kw">&lt;ul&gt;</span></span>
 <span id="cb20-13"><a href="html-basics.html#cb20-13" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
 <span id="cb20-14"><a href="html-basics.html#cb20-14" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>身高：170<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb20-15"><a href="html-basics.html#cb20-15" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-16"><a href="html-basics.html#cb20-16" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
-<span id="cb20-17"><a href="html-basics.html#cb20-17" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>体重：60 <span class="kw">&lt;em&gt;</span>公斤<span class="kw">&lt;/em&gt;</span>  <span class="kw">&lt;sup</span><span class="ot"> class=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;#dfref-footnote-1&#39;</span><span class="ot"> name=</span><span class="st">&#39;ref-footnote-1&#39;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
+<span id="cb20-17"><a href="html-basics.html#cb20-17" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>体重：60 <span class="kw">&lt;em&gt;</span>公斤<span class="kw">&lt;/em&gt;</span>  <span class="kw">&lt;sup</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&#39;#dfref-footnote-1&#39;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&#39;ref-footnote-1&#39;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
 <span id="cb20-18"><a href="html-basics.html#cb20-18" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-19"><a href="html-basics.html#cb20-19" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
-<span id="cb20-20"><a href="html-basics.html#cb20-20" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>性别：<span class="kw">&lt;strong&gt;</span>男<span class="kw">&lt;/strong&gt;</span> <span class="kw">&lt;sup</span><span class="ot"> class=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;#dfref-footnote-2&#39;</span><span class="ot"> name=</span><span class="st">&#39;ref-footnote-2&#39;</span><span class="kw">&gt;</span>2<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
+<span id="cb20-20"><a href="html-basics.html#cb20-20" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>性别：<span class="kw">&lt;strong&gt;</span>男<span class="kw">&lt;/strong&gt;</span> <span class="kw">&lt;sup</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;md-footnote&#39;</span><span class="kw">&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&#39;#dfref-footnote-2&#39;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&#39;ref-footnote-2&#39;</span><span class="kw">&gt;</span>2<span class="kw">&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</span></span>
 <span id="cb20-21"><a href="html-basics.html#cb20-21" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-22"><a href="html-basics.html#cb20-22" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
 <span id="cb20-23"><a href="html-basics.html#cb20-23" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>出生日期：<span class="kw">&lt;del&gt;</span>2000年0月0日<span class="kw">&lt;/del&gt;&lt;/p&gt;</span></span>
 <span id="cb20-24"><a href="html-basics.html#cb20-24" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-25"><a href="html-basics.html#cb20-25" aria-hidden="true" tabindex="-1"></a>       <span class="kw">&lt;li&gt;</span></span>
 <span id="cb20-26"><a href="html-basics.html#cb20-26" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;p&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb20-27"><a href="html-basics.html#cb20-27" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;ol</span><span class="ot"> start=</span><span class="st">&#39;&#39;</span> <span class="kw">&gt;</span></span>
+<span id="cb20-27"><a href="html-basics.html#cb20-27" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;ol</span> <span class="er">start</span><span class="ot">=</span><span class="st">&#39;&#39;</span> <span class="kw">&gt;</span></span>
 <span id="cb20-28"><a href="html-basics.html#cb20-28" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;li&gt;</span>《万万没想到》<span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-29"><a href="html-basics.html#cb20-29" aria-hidden="true" tabindex="-1"></a>            <span class="kw">&lt;li&gt;</span>《暴走大事件》<span class="kw">&lt;/li&gt;</span></span>
 <span id="cb20-30"><a href="html-basics.html#cb20-30" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;/ol&gt;</span></span>
@@ -387,10 +392,10 @@ Figure 3.6: 部署成功后的页面
 </ul>
 <p>以上就是「个人照片」之前的部分中我们需要学到的东西。</p>
 </div>
-<div id="after-personal-photo" class="section level3" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> 「个人照片」之后的部分</h3>
-<div id="html-img" class="section level4" number="3.4.2.1">
-<h4><span class="header-section-number">3.4.2.1</span> img</h4>
+<div id="after-personal-photo" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> 「个人照片」之后的部分</h3>
+<div id="html-img" class="section level4" number="3.5.2.1">
+<h4><span class="header-section-number">3.5.2.1</span> img</h4>
 <p><code>img</code>：插入图片。<code>img</code> 标签有两个必需的属性：</p>
 <ul>
 <li><code>src</code>：source (来源) 的缩写，用于提示图片地址，可以直接插入网址，或者本地图片地址。</li>
@@ -399,20 +404,20 @@ Figure 3.6: 部署成功后的页面
 <p>除此之外，<code>img</code> 还可以通过 <code>height</code> 和 <code>width</code> 属性来改变图片的长度和宽度。</p>
 <p>需要注意的是，和上面所有的标签不同，<code>&lt;img&gt;</code> 不需要 <code>&lt;/img&gt;</code> 来结尾。</p>
 <p>我们来举一个栗子🌰：</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="html-basics.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;image/my_family.jpg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;A photo of my family in 2005&quot;</span><span class="ot"> height=</span><span class="st">&quot;300&quot;</span><span class="ot"> width=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="html-basics.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;image/my_family.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;A photo of my family in 2005&quot;</span> <span class="er">height</span><span class="ot">=</span><span class="st">&quot;300&quot;</span> <span class="er">width</span><span class="ot">=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span></code></pre></div>
 <p>上面这行代码需要注意的是，属性之间不需要逗号来间隔。<code>height</code> 和 <code>width</code> 的默认单位是像素 (pixels)。</p>
 
 <div class="rmdtip">
 宽度（width）就可以了，因为浏览器默认图片长宽比保持不变。
 </div>
 </div>
-<div id="html-figure" class="section level4" number="3.4.2.2">
-<h4><span class="header-section-number">3.4.2.2</span> figure 与 figcaption</h4>
+<div id="html-figure" class="section level4" number="3.5.2.2">
+<h4><span class="header-section-number">3.5.2.2</span> figure 与 figcaption</h4>
 <p>说到 <code>&lt;img&gt;</code> 我们就不得不提到 <code>&lt;figure&gt;</code>。<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间除了可以放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#images">图片</a>，还能放<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#poems">诗</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#code_snippets">代码块</a>等。只要你觉得一些内容可以当成一个图像来看待，你就可以将其放到<code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。比如 <code>wangdachui.html</code> 就把作品简介之下的表格放在了 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 之间。</p>
 <p>有一点需要注意：即使把 <code>&lt;figure&gt;</code> 和 <code>&lt;/figure&gt;</code> 去掉，浏览器显示的内容并不会有任何改变。</p>
 <p><code>&lt;figure&gt;</code> 最常见的用法是和 <code>&lt;img&gt;</code>及<code>&lt;figcaption&gt;</code> 一起用，这样可以在图片下面加上说明文字。比如：</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="html-basics.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure&gt;</span></span>
-<span id="cb22-2"><a href="html-basics.html#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">&quot;images/home.png&quot;</span><span class="ot"> alt=</span><span class="st">&quot;Home Icon&quot;</span><span class="ot"> height=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb22-2"><a href="html-basics.html#cb22-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;images/home.png&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Home Icon&quot;</span> <span class="er">height</span><span class="ot">=</span><span class="st">&quot;200&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb22-3"><a href="html-basics.html#cb22-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;figcaption&gt;</span>以上图标来自 https://tillamookhabitat.org/wp-content/uploads/2017/03/home-icon-1030x541.png<span class="kw">&lt;/figcaption&gt;</span></span>
 <span id="cb22-4"><a href="html-basics.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
 <figure>
@@ -422,8 +427,8 @@ Figure 3.6: 部署成功后的页面
 </figcaption>
 </figure>
 </div>
-<div id="html-table" class="section level4" number="3.4.2.3">
-<h4><span class="header-section-number">3.4.2.3</span> Table</h4>
+<div id="html-table" class="section level4" number="3.5.2.3">
+<h4><span class="header-section-number">3.5.2.3</span> Table</h4>
 <p>目前你只需要知道，<code>table</code>, <code>th</code>, <code>tr</code>, <code>td</code> 可以设置表格。其中，<code>th</code> （或者<code>thead</code>, 这两个一样）设置表头单元格，<code>tr</code> 设置行(row), <code>td</code> 设置具体的单元格。</p>
 <p>比如，</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb23-1"><a href="html-basics.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table&gt;</span></span>
@@ -480,8 +485,8 @@ Figure 3.6: 部署成功后的页面
 </table>
 <p>此外，还可以通过 <code>colspan</code> 和 <code>rowspan</code>来合并单元格，也可以用 <code>&lt;caption&gt;</code> 在表格开头设置文字说明。这里不展开讲，如有兴趣，参考<a href="https://www.footmark.info/web-design/html/html-table-structured-merge-group/">这里</a>。</p>
 </div>
-<div id="html-blockquote" class="section level4" number="3.4.2.4">
-<h4><span class="header-section-number">3.4.2.4</span> blockquote</h4>
+<div id="html-blockquote" class="section level4" number="3.5.2.4">
+<h4><span class="header-section-number">3.5.2.4</span> blockquote</h4>
 <p><code>&lt;blockquote&gt;</code> 可以用来设置引用，比如：</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="html-basics.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;blockquote&gt;</span></span>
 <span id="cb24-2"><a href="html-basics.html#cb24-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span> 这话不是我说的。— 鲁迅<span class="kw">&lt;/p&gt;</span></span>
@@ -492,13 +497,13 @@ Figure 3.6: 部署成功后的页面
 </p>
 </blockquote>
 </div>
-<div id="html-span-div" class="section level4" number="3.4.2.5">
-<h4><span class="header-section-number">3.4.2.5</span> span 和 div</h4>
+<div id="html-span-div" class="section level4" number="3.5.2.5">
+<h4><span class="header-section-number">3.5.2.5</span> span 和 div</h4>
 <p>span 的字面意思是「横跨」，div 是 division (区域、部分)。这两个在下面我们讲解 CSS 时会经常用到。现在你只需要知道，这两个都是把一个部分围绕起来。比如，我有两个段落，我想让第一段的字都用红色，第二段的字都用蓝色，那么，我可以：</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb25-1"><a href="html-basics.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb25"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb25-1"><a href="html-basics.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb25-2"><a href="html-basics.html#cb25-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第一段文字，红色<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb25-3"><a href="html-basics.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
-<span id="cb25-4"><a href="html-basics.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb25-4"><a href="html-basics.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb25-5"><a href="html-basics.html#cb25-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第二段文字，蓝色<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb25-6"><a href="html-basics.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 <div style="color:red">
@@ -512,10 +517,10 @@ Figure 3.6: 部署成功后的页面
 </p>
 </div>
 <p>当然，我也可以用 <code>span</code>：</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="html-basics.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="html-basics.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb26-2"><a href="html-basics.html#cb26-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第一段文字，红色<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb26-3"><a href="html-basics.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/span&gt;</span></span>
-<span id="cb26-4"><a href="html-basics.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> style=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb26-4"><a href="html-basics.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:blue&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb26-5"><a href="html-basics.html#cb26-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;p&gt;</span>第二段文字，蓝色<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb26-6"><a href="html-basics.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/span&gt;</span></span></code></pre></div>
 <span style="color:red">
@@ -529,8 +534,8 @@ Figure 3.6: 部署成功后的页面
 </p>
 <p></span></p>
 </div>
-<div id="comments" class="section level4" number="3.4.2.6">
-<h4><span class="header-section-number">3.4.2.6</span> 注释</h4>
+<div id="comments" class="section level4" number="3.5.2.6">
+<h4><span class="header-section-number">3.5.2.6</span> 注释</h4>
 <p>在 <code>&lt;!--</code> 和 <code>--&gt;</code> 之间插入注释。这个注释在 HTML 页面中不会显示。只有你用文本编辑器打开这个 HTML 文件时才会看到。</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="html-basics.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 这里插入评语或注释，在 HTML 页面中不会显示。只有你用文本编辑器打开这个 HTML 文件时才会看到。--&gt;</span></span></code></pre></div>
 
@@ -548,7 +553,6 @@ Figure 3.6: 部署成功后的页面
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -567,6 +571,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -587,6 +592,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

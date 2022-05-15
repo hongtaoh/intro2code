@@ -14,7 +14,6 @@ markdown
 markdown-编辑器
 md-grammer
 标题
-粗体斜体
 列表
 表格
 引语
@@ -31,6 +30,7 @@ md-exercise
 作品简介
 常用语
 html-basics
+苹果系统安装-git
 windows-系统安装-git
 deploy-html
 content-update

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>第 4 章 CSS 基础 | 实用编程入门指南</title>
   <meta name="description" content="编程入门" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="第 4 章 CSS 基础 | 实用编程入门指南" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="郝鸿涛" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2022-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="html-basics.html"/>
 
-<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -59,6 +59,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -119,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
@@ -149,16 +151,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="markdown.html"><a href="markdown.html#md-grammer"><i class="fa fa-check"></i><b>2.2</b> Markdown 语法讲解</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="markdown.html"><a href="markdown.html#标题"><i class="fa fa-check"></i><b>2.2.1</b> 标题</a></li>
-<li class="chapter" data-level="2.2.2" data-path="markdown.html"><a href="markdown.html#粗体斜体"><i class="fa fa-check"></i><b>2.2.2</b> 粗体、斜体</a></li>
-<li class="chapter" data-level="2.2.3" data-path="markdown.html"><a href="markdown.html#列表"><i class="fa fa-check"></i><b>2.2.3</b> 列表</a></li>
-<li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.4</b> 表格</a></li>
-<li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.5</b> 引语</a></li>
-<li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.6</b> 链接</a></li>
-<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#image"><i class="fa fa-check"></i><b>2.2.7</b> 插入图片</a></li>
-<li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.8</b> 代码</a></li>
-<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.9</b> 注释</a></li>
-<li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.10</b> HTML</a></li>
-<li class="chapter" data-level="2.2.11" data-path="markdown.html"><a href="markdown.html#分隔线"><i class="fa fa-check"></i><b>2.2.11</b> 分隔线</a></li>
+<li class="chapter" data-level="2.2.2" data-path="markdown.html"><a href="markdown.html#列表"><i class="fa fa-check"></i><b>2.2.2</b> 列表</a></li>
+<li class="chapter" data-level="2.2.3" data-path="markdown.html"><a href="markdown.html#表格"><i class="fa fa-check"></i><b>2.2.3</b> 表格</a></li>
+<li class="chapter" data-level="2.2.4" data-path="markdown.html"><a href="markdown.html#引语"><i class="fa fa-check"></i><b>2.2.4</b> 引语</a></li>
+<li class="chapter" data-level="2.2.5" data-path="markdown.html"><a href="markdown.html#链接"><i class="fa fa-check"></i><b>2.2.5</b> 链接</a></li>
+<li class="chapter" data-level="2.2.6" data-path="markdown.html"><a href="markdown.html#image"><i class="fa fa-check"></i><b>2.2.6</b> 插入图片</a></li>
+<li class="chapter" data-level="2.2.7" data-path="markdown.html"><a href="markdown.html#代码"><i class="fa fa-check"></i><b>2.2.7</b> 代码</a></li>
+<li class="chapter" data-level="2.2.8" data-path="markdown.html"><a href="markdown.html#注释"><i class="fa fa-check"></i><b>2.2.8</b> 注释</a></li>
+<li class="chapter" data-level="2.2.9" data-path="markdown.html"><a href="markdown.html#html"><i class="fa fa-check"></i><b>2.2.9</b> HTML</a></li>
+<li class="chapter" data-level="2.2.10" data-path="markdown.html"><a href="markdown.html#分隔线"><i class="fa fa-check"></i><b>2.2.10</b> 分隔线</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="markdown.html"><a href="markdown.html#md-exercise"><i class="fa fa-check"></i><b>2.3</b> Markdown 练习</a>
 <ul>
@@ -167,16 +168,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="html-basics.html"><a href="html-basics.html"><i class="fa fa-check"></i><b>3</b> HTML 基本知识</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.1</b> Windows 系统安装 Git</a></li>
-<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.2</b> 网页部署</a></li>
-<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.3</b> 更新内容</a>
+<li class="chapter" data-level="3.1" data-path="html-basics.html"><a href="html-basics.html#苹果系统安装-git"><i class="fa fa-check"></i><b>3.1</b> 苹果系统安装 Git</a></li>
+<li class="chapter" data-level="3.2" data-path="html-basics.html"><a href="html-basics.html#windows-系统安装-git"><i class="fa fa-check"></i><b>3.2</b> Windows 系统安装 Git</a></li>
+<li class="chapter" data-level="3.3" data-path="html-basics.html"><a href="html-basics.html#deploy-html"><i class="fa fa-check"></i><b>3.3</b> 网页部署</a></li>
+<li class="chapter" data-level="3.4" data-path="html-basics.html"><a href="html-basics.html#content-update"><i class="fa fa-check"></i><b>3.4</b> 更新内容</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.3.1</b> 经常更新怎么办</a></li>
+<li class="chapter" data-level="3.4.1" data-path="html-basics.html"><a href="html-basics.html#updating-often"><i class="fa fa-check"></i><b>3.4.1</b> 经常更新怎么办</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="html-basics.html"><a href="html-basics.html#html-intro"><i class="fa fa-check"></i><b>3.4</b> HTML</a>
+<li class="chapter" data-level="3.5" data-path="html-basics.html"><a href="html-basics.html#html-intro"><i class="fa fa-check"></i><b>3.5</b> HTML</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="html-basics.html"><a href="html-basics.html#before-personal-photo"><i class="fa fa-check"></i><b>3.4.1</b> 我们先来看「个人照片」之前的部分</a></li>
-<li class="chapter" data-level="3.4.2" data-path="html-basics.html"><a href="html-basics.html#after-personal-photo"><i class="fa fa-check"></i><b>3.4.2</b> 「个人照片」之后的部分</a></li>
+<li class="chapter" data-level="3.5.1" data-path="html-basics.html"><a href="html-basics.html#before-personal-photo"><i class="fa fa-check"></i><b>3.5.1</b> 我们先来看「个人照片」之前的部分</a></li>
+<li class="chapter" data-level="3.5.2" data-path="html-basics.html"><a href="html-basics.html#after-personal-photo"><i class="fa fa-check"></i><b>3.5.2</b> 「个人照片」之后的部分</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="css.html"><a href="css.html"><i class="fa fa-check"></i><b>4</b> CSS 基础</a>
@@ -213,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>这些想法都可以用 CSS 来实现。</p>
 <p>我们首先来讲一下 CSS 的三种设置方式。</p>
 <p>现在有一个任务：我想把 <code>wangdachui.html</code> 这个文档的背景改成黑色，文字改成白色，其中「王大锤简历」这五个字用红色, 「出演作品」这四个字用橘黄色。我们用 CSS 来完成这一任务。</p>
-<div class="figure" style="text-align: center"><span id="fig:css-gif"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:css-gif"></span>
 <img src="https://i.pinimg.com/originals/81/d2/bf/81d2bffd2d12c8275ab2c708b3fd5297.gif" alt="CSS 其实挺让人头大的" width="50%" />
 <p class="caption">
 Figure 4.1: CSS 其实挺让人头大的
@@ -228,16 +230,16 @@ Figure 4.1: CSS 其实挺让人头大的
 <span id="cb28-2"><a href="css.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb28-3"><a href="css.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>wangdachui<span class="kw">&lt;/title&gt;</span></span>
 <span id="cb28-4"><a href="css.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb28-5"><a href="css.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body</span><span class="ot"> style=</span><span class="st">&quot;background-color:black; color:white&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb28-5"><a href="css.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;background-color:black; color:white&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb28-6"><a href="css.html#cb28-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h1&gt;</span>王大锤简历<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb28-7"><a href="css.html#cb28-7" aria-hidden="true" tabindex="-1"></a>   ...</span>
 <span id="cb28-8"><a href="css.html#cb28-8" aria-hidden="true" tabindex="-1"></a>   ...</span>
 <span id="cb28-9"><a href="css.html#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
 <span id="cb28-10"><a href="css.html#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
 <p>现在用浏览器打开，背景色和文本颜色已经改变了。现在，我们要把「王大锤简历」这五个字改成红色：</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb29-1"><a href="css.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span><span class="ot"> style=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span>王大锤简历<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb29-1"><a href="css.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:red&quot;</span><span class="kw">&gt;</span>王大锤简历<span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
 <p>把「出演作品」改成橘黄色：</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb30-1"><a href="css.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span><span class="ot"> style=</span><span class="st">&quot;color:orange&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb30-1"><a href="css.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color:orange&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>改好了。</p>
 <p>这种方法的优点是简单，快速。但是，当 HTML 中有很多内容都需要修改样式时，用这种方法会把 HTML 文档弄得乱七八糟，自己都不想看。</p>
 </div>
@@ -246,7 +248,7 @@ Figure 4.1: CSS 其实挺让人头大的
 <p>第二种方法是在 <code>&lt;head&gt;</code> 和 <code>&lt;/head&gt;</code> 之间加入 CSS：</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb31-1"><a href="css.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb31-2"><a href="css.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb31-3"><a href="css.html#cb31-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb31-3"><a href="css.html#cb31-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;style</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb31-4"><a href="css.html#cb31-4" aria-hidden="true" tabindex="-1"></a>        body {</span>
 <span id="cb31-5"><a href="css.html#cb31-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">background-color</span>: <span class="cn">black</span><span class="op">;</span></span>
 <span id="cb31-6"><a href="css.html#cb31-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
@@ -270,11 +272,11 @@ Figure 4.1: CSS 其实挺让人头大的
 <p>现在的问题是，我们如何只定义 <code>&lt;p&gt;出演作品&lt;/p&gt;</code> 这一行的样式呢？这就需要用到「类」，即 class。</p>
 <p>我们可以给 <code>&lt;p&gt;出演作品&lt;/p&gt;</code>分配一个 class, 比如 <code>class = "text-orange"</code>，然后定义这个 class 的样式，「出演作品」这四个字的样式也就改变了。</p>
 <p>第一步是：</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb32-1"><a href="css.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">&quot;text-orange&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb32-1"><a href="css.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;text-orange&quot;</span><span class="kw">&gt;</span>出演作品<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>第二步：</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb33-1"><a href="css.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb33-2"><a href="css.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb33-3"><a href="css.html#cb33-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb33-3"><a href="css.html#cb33-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;style</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb33-4"><a href="css.html#cb33-4" aria-hidden="true" tabindex="-1"></a>        body {</span>
 <span id="cb33-5"><a href="css.html#cb33-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">background-color</span>: <span class="cn">black</span><span class="op">;</span></span>
 <span id="cb33-6"><a href="css.html#cb33-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
@@ -301,14 +303,14 @@ Figure 4.1: CSS 其实挺让人头大的
 <ol style="list-style-type: decimal">
 <li>一个「类」可以被多个不同元素多次使用。比如，我们想「个人照片」这几个字也改成橘黄色，那么只需要：</li>
 </ol>
-<div class="sourceCode" id="cb34"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb34-1"><a href="css.html#cb34-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h2</span><span class="ot"> class=</span><span class="st">&quot;text-orange&quot;</span><span class="kw">&gt;</span>个人照片<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb34-1"><a href="css.html#cb34-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;h2</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;text-orange&quot;</span><span class="kw">&gt;</span>个人照片<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
 <p>这样，只有这一个二级标题会变成橘黄色（别的二级标题，比如「基本信息」则不变）。</p>
 <ol start="2" style="list-style-type: decimal">
 <li>多个类可以放在一起</li>
 </ol>
 <p>比如，你不仅想让「个人照片」这四个字变成橘黄色，还想让这四个字和它下面的内容隔开（比如，相隔 300 个像素）。直接修改 <code>text-orange</code> 是不行的，那么做的话「出演作品」的样式也会被修改。</p>
 <p>这时候，我们可以给 <code>&lt;h2&gt;个人照片&lt;/h2&gt;</code> 多加一个「类」：</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb35-1"><a href="css.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span><span class="ot"> class=</span><span class="st">&quot;text-orange go-down&quot;</span><span class="kw">&gt;</span>个人照片<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb35-1"><a href="css.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;text-orange go-down&quot;</span><span class="kw">&gt;</span>个人照片<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
 <p>两个「类」之间需要有一个空格，浏览器会自动识别出这是两个不同的「类」。</p>
 <p>然后，在 CSS 中添加：</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb36-1"><a href="css.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.go-down</span> {</span>
@@ -317,7 +319,7 @@ Figure 4.1: CSS 其实挺让人头大的
 <p>直接写成 <code>.go-down {margin-bottom: 300px}</code> 也可以，第一种方法看起来更直观。</p>
 <p>讲到这里，顺带讲一下，两个「选择器」可以同时被定义。什么是选择器呢？<code>h1 {color:red;}</code> 和 <code>.go-down {margin-bottom: 300px}</code> 中，<code>h1</code> 和 <code>.go-down</code> 都叫做选择器，前者叫「元素选择器」，因为是 HTML 自带的元素，比如 <code>body</code>, <code>h1</code>, <code>p</code> 等，后者叫「类选择器」。</p>
 <p>假设我们现在想把「常用语」这三个字也改成红色。我们可以给它加一个「类」：</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb37-1"><a href="css.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span><span class="ot"> class=</span><span class="st">&quot;text-red&quot;</span><span class="kw">&gt;</span>常用语<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb37-1"><a href="css.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h2</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;text-red&quot;</span><span class="kw">&gt;</span>常用语<span class="kw">&lt;/h2&gt;</span></span></code></pre></div>
 <p>然后，在上面的 CSS 中，直接用：</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb38-1"><a href="css.html#cb38-1" aria-hidden="true" tabindex="-1"></a>h1，</span>
 <span id="cb38-2"><a href="css.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.text-red</span> {</span>
@@ -328,7 +330,7 @@ Figure 4.1: CSS 其实挺让人头大的
 <h2><span class="header-section-number">4.3</span> 方法三</h2>
 <p>第三种方法，也是比较推荐，也常用的方法，是在 <code>head</code> 中加入一个外部链接：</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb39-1"><a href="css.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb39-2"><a href="css.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb39-2"><a href="css.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;style.css&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb39-3"><a href="css.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>在文本编辑器中新建一个文档，将其命名为 <code>style.css</code>（你可以用任何你喜欢的名字），加入以下内容：</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb40-1"><a href="css.html#cb40-1" aria-hidden="true" tabindex="-1"></a>body {</span>
@@ -367,18 +369,18 @@ Figure 4.1: CSS 其实挺让人头大的
 
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Water<a href="markdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>你知道最后一个「知」怎么念吗？<a href="markdown.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>抱歉，我忘记具体哪一篇了<a href="markdown.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>在中国常用的问候语<a href="markdown.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>你现在看到的内容是 <code>bookdown</code> 渲染出来的效果，所以上面 那副图底下你能看到<code>[]</code> 里面的内容成了文字说明。<a href="markdown.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>注意：「公斤」是斜体。<a href="markdown.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>注意：「男」是粗体。<a href="markdown.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
@@ -389,7 +391,6 @@ Figure 4.1: CSS 其实挺让人头大的
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -408,6 +409,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -428,6 +430,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
